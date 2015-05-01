@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>http://localhost/</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="About.aspx">
+      <publishTime>02/24/2015 12:24:52</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>03/02/2015 12:56:57</publishTime>
+    </File>
+    <File Include="bin/Topdesk_Dashboard.dll">
+      <publishTime>04/15/2015 13:59:09</publishTime>
+    </File>
+    <File Include="Change.aspx">
+      <publishTime>03/18/2015 11:31:33</publishTime>
+    </File>
+    <File Include="Dashboard.aspx">
+      <publishTime>03/19/2015 09:30:05</publishTime>
+    </File>
+    <File Include="IncidentInfo.aspx">
+      <publishTime>03/03/2015 14:54:10</publishTime>
+    </File>
+    <File Include="Model1.edmx.diagram">
+      <publishTime>03/20/2015 13:35:52</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>03/02/2015 12:57:13</publishTime>
+    </File>
+    <File Include="ScriptFile.js">
+      <publishTime>03/03/2015 08:51:49</publishTime>
+    </File>
+    <File Include="Site1.Master">
+      <publishTime>03/16/2015 14:20:14</publishTime>
+    </File>
+    <File Include="Statistics.aspx">
+      <publishTime>04/10/2015 10:51:16</publishTime>
+    </File>
+    <File Include="StyleSheet.css">
+      <publishTime>04/08/2015 11:56:13</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/16/2015 12:05:38</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

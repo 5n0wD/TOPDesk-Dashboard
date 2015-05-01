@@ -1,0 +1,160 @@
+﻿/*rest stuff*/
+body {
+    font-family: Arial,sans-serif,Tahoma,Verdana,"Trebuchet MS";
+    background-color: #591701;
+}
+
+/*IDs*/
+/*tekst*/
+#Kop {
+    background-color: purple;
+    font-family: Arial,sans-serif,Tahoma,Verdana;
+}
+
+#h1, h2, h3, h4, h5, h6 {
+    font-family: Arial,sans-serif,Tahoma,Verdana;
+}
+/*tekst*/
+
+/*Content*/
+#Content1, Content2 {
+    float: left;
+}
+
+#Content3 {
+    float: right;
+}
+/*Content*/
+
+/*Divjes*/
+#DivContent1 {
+    background-color: olivedrab;
+}
+
+#InnerDivContent1 {
+    background-color: hotpink;
+}
+
+#DivContent2 {
+    background-color: darkblue;
+}
+
+#DivContent1en2 {
+    background-color: olivedrab;
+}
+
+#DivContent3 {
+    background-color: darkred;
+}
+
+#DivContent4 {
+    background-color: orange;
+}
+
+#StreefDatumInfoDiv {
+    background-color: aqua;
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+#InfoPanelDiv {
+    background-color: orangered;
+    float: right;
+    width: 50%;
+}
+
+#InnerInfoPanelDiv {
+    background-color: aliceblue;
+    width: 50%;
+}
+
+#About {
+    float: left;
+    width: 100%;
+}
+
+#txtKorteOmschrijving {
+    Width: 250px;
+}
+
+#IncidentenEnWijzigingen {
+    background-color: greenyellow;
+    overflow: hidden;
+}
+
+#IncidentenDiv {
+    float: left;
+    background-color: darkorange;
+}
+
+#WijzigingenDiv {
+    float: right;
+    background-color: orangered;
+}
+
+#binnenGekomenMeldingen {
+    float: left;
+    background-color: mistyrose;
+}
+
+#AuthNonImpl {
+    float: right;
+    background-color: rosybrown;
+}
+
+#chartdiv {
+    background-color: greenyellow;
+    overflow: hidden;
+}
+
+
+/*Classes*/
+.Paragraph {
+    color: white;
+}
+
+.InfoParagraph {
+    color: white;
+    display: inline-block;
+}
+
+.HiddenActieHeader {
+    visibility: hidden;
+    display: none;
+}
+
+.HiddenActieItems {
+    visibility: hidden;
+    display: none;
+}
+
+.HiddenOmschrijvingHeader {
+    visibility: hidden;
+    display: none;
+}
+
+.HiddenOmschrijvingItems {
+    visibility: hidden;
+    display: none;
+}
+
+.ChartDiv {
+    background-color: greenyellow;
+}
+
+.GridViewHeader {
+    background-color: aquamarine;
+}
+
+.GridViewRows {
+    background-color: lightgoldenrodyellow;
+}
+
+.lblCssClass {
+    background-color: aqua;
+}
+
+.MenuCssClass {
+    background-color: greenyellow;
+}
