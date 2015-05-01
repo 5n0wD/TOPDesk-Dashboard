@@ -1,0 +1,34 @@
+-- dit is goed
+select cast(datumafspraak as date)as "Afspraak datum", naam, korteomschrijving,ref_operatordynanaam
+from incident
+where
+ref_operatordynanaam = 'Hennie Bulthuis' and datumafspraak between datumaangemeld and DATEADD(DAY,90,datumaangemeld) and ref_status not like 'wacht%' and ref_status != 'opgelost' and afgemeld = 0 or ref_operatordynanaam = 'Hennie Bulthuis' and datumafspraak between datumaangemeld and DATEADD(DAY,-90,datumaangemeld) and ref_status not like 'wacht%' and ref_status != 'opgelost' and afgemeld = 0 or
+ref_operatordynanaam = 'Henk Westra' and datumafspraak between datumaangemeld and DATEADD(DAY,90,datumaangemeld) and ref_status not like 'wacht%' and ref_status != 'opgelost' and afgemeld = 0 or ref_operatordynanaam = 'Henk Westra' and datumafspraak between datumaangemeld and DATEADD(DAY,-90,datumaangemeld) and ref_status not like 'wacht%' and ref_status != 'opgelost' and afgemeld = 0 or
+ref_operatordynanaam = 'Gerben Grootenhuis' and datumafspraak between datumaangemeld and DATEADD(DAY,90,datumaangemeld) and ref_status not like 'wacht%' and ref_status != 'opgelost' and afgemeld = 0 or ref_operatordynanaam = 'Gerben Grootenhuis' and datumafspraak between datumaangemeld and DATEADD(DAY,-90,datumaangemeld) and ref_status not like 'wacht%' and ref_status != 'opgelost' and afgemeld = 0
+order by datumaangemeld desc
+--//
+
+
+
+
+
+
+
+
+
+
+--dit is bijna goed
+select cast(dataanmk as DATE) as "Datum", count(*) as "count datum",ref_operatordynanaam
+from incident
+where ref_operatordynanaam = any
+(
+	select distinct(ref_operatordynanaam)
+	from incident
+	where ref_operatordynanaam = 'Hennie Bulthuis' and cast(dataanmk as DATE) < dateadd(MONTH,10,SYSDATETIME()) --or
+	    --  ref_operatordynanaam = 'Gerben Grootenhuis' and cast(dataanmk as DATE) < dateadd(day,-10,SYSDATETIME()) or
+        --  ref_operatordynanaam = 'Henk Westra' and cast(dataanmk as DATE) < dateadd(day,-10,SYSDATETIME())
+)
+and ref_status != 'opgelost' and ref_status not like 'Wachten op%' and afgemeld = 0
+group by cast(dataanmk as date),ref_operatordynanaam
+order by cast(dataanmk as date) desc
+--//

@@ -1,0 +1,5 @@
+servernaam: PVB-P-TD1
+IPadres: 172.30.102.26
+DatabaseNaam: topdesk5
+DatabaseUser: helpdesk
+password: 
