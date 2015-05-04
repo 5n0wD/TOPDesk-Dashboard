@@ -22,6 +22,15 @@ namespace Topdesk_Dashboard {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl DivContent1;
         
         /// <summary>
+        /// dgvChangeInfo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView dgvChangeInfo;
+        
+        /// <summary>
         /// WijzigingsDataSource control.
         /// </summary>
         /// <remarks>
@@ -40,13 +49,22 @@ namespace Topdesk_Dashboard {
         protected global::System.Web.UI.WebControls.Table tblAspTable;
         
         /// <summary>
-        /// txtIncidentNaam control.
+        /// txtWijzigingNaam control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIncidentNaam;
+        protected global::System.Web.UI.WebControls.TextBox txtWijzigingNaam;
+        
+        /// <summary>
+        /// txtActiviteitNaam control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtActiviteitNaam;
         
         /// <summary>
         /// txtStreefDatum control.

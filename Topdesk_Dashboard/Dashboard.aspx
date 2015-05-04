@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Dashboard.aspx.cs" EnableEventValidation="false" ValidateRequest="false" Inherits="Topdesk_Dashboard.Dashboard" %>
 <%-- V1.1 --%>
 <asp:Content ID="Style" ContentPlaceHolderID="Stylesheets" runat="server">
-    <title title="Dashboard">Dashboard</title>
+    <title title="Incident">Incidenten overzicht</title>
 </asp:Content>
 
 <%--Content--%> 
@@ -104,6 +104,7 @@
         </div>
     </div>
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentplaceHolder2" runat="server">
     <div id="DivContent2">
     </div>
@@ -112,7 +113,6 @@
     <div id="divContent3">
     </div>
 </asp:Content>
-<%--Content --%>
-
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder4" runat="server">
+
 </asp:Content>

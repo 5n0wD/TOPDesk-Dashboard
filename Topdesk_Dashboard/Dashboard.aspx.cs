@@ -104,7 +104,6 @@ namespace Topdesk_Dashboard
             txtKorteOmschrijving.Text = dgvRow.Cells[5].Text;
             txtActie.Text = dgvRow.Cells[6].Text;
         }
-
         protected void dgvStreefDatumInfo_PageIndexChanged(object sender, EventArgs e)
         {
             dgvStreefDatumInfo.SelectedIndex = 0;
