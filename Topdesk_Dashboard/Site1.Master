@@ -25,6 +25,8 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 <div id="DivContent1">
                 </div>
+
+                <%--Tab "menu"--%>
             </asp:ContentPlaceHolder>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
                 <div id="DivContent2">
@@ -42,6 +44,7 @@
                 <div id="DivContent5">
                 </div>
             </asp:ContentPlaceHolder>
+
         </div>
     </form>
 </body>

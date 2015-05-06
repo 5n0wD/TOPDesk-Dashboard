@@ -12,7 +12,6 @@
 
     <div id="DivContent1">
         <div id="IncidentenEnWijzigingen">
-             
             <div id="IncidentenDiv">
                 <p class="InfoParagraph">Incidenten</p>
                 <asp:Table ID="IncidentenTable" runat="server">
@@ -108,7 +107,6 @@
                     </asp:TableRow>
                 </asp:Table>
             </div>
-
         </div>
     </div>
 
@@ -188,11 +186,8 @@
 </asp:Content>
 
 <asp:Content ID="Content5" ContentPlaceHolderID="ContentPlaceHolder4" runat="server">
-
     <div id="DivContent1en2">
-
         <div class="ChartDiv">
-
             <div id="binnenGekomenMeldingen">
                 <p class="Paragraph">Binnen gekomen meldingen</p>
                 <asp:GridView ID="GridView1" PageSize="5" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical">
@@ -230,8 +225,6 @@
                 </asp:GridView>
                 <asp:SqlDataSource ID="sqlDSAuthNonImpl" runat="server" ConnectionString="<%$ ConnectionStrings:topdesk5ConnectionString %>" SelectCommand="SELECT DISTINCT c.number, COUNT(ca.number) AS [aantal activiteiten], CAST(c.authorizationdate AS date) AS [authorisatie datum] FROM change AS c RIGHT OUTER JOIN changeactivity AS ca ON ca.ref_change_number = c.number WHERE (c.authorizationdate IS NOT NULL) AND (c.implementationdate IS NULL) AND (ca.resolved = 0) GROUP BY c.number, c.authorizationdate ORDER BY c.number DESC"></asp:SqlDataSource>
             </div>
-
         </div>
     </div>
-
 </asp:Content>
