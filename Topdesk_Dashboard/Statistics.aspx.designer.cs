@@ -265,6 +265,33 @@ namespace Topdesk_Dashboard {
         protected global::System.Web.UI.WebControls.TextBox TextBox6;
         
         /// <summary>
+        /// btnIncident control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnIncident;
+        
+        /// <summary>
+        /// tblTab control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Table tblTab;
+        
+        /// <summary>
+        /// tblTabCell control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell tblTabCell;
+        
+        /// <summary>
         /// Chart3 control.
         /// </summary>
         /// <remarks>

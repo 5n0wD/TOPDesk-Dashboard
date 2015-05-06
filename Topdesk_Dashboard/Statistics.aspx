@@ -110,7 +110,18 @@
         </div>
     </div>
 
+    <asp:Button ID="btnIncident" runat="server" Text="Incident" OnClick="TabIncident()" />
+    <asp:Table ID="tblTab" runat="server">
+        <asp:TableRow>
+            <asp:TableCell ID="tblTabCell">
+                <div id="tabContent">
+
+                </div>
+            </asp:TableCell>
+        </asp:TableRow>
+    </asp:Table>
     <div id="DivContent3">
+
         <p class="Paragraph">Aantal meldingen dat binnenkort moeten worden opgelost</p>
         <div class="ChartDiv">
             <asp:Chart ID="Chart3" runat="server" DataSourceID="StillToComeDataSource" Height="200px" Width="900px" Palette="Bright">

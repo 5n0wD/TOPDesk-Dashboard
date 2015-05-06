@@ -78,6 +78,9 @@ body {
     width: 50%;
 }
 
+#btnIncident {
+    position: center;
+}
 
 #InnerInfoPanelDiv {
     background-color: aliceblue;

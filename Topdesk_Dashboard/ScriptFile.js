@@ -1,3 +1,3 @@
-﻿function SendDataToForm() {
-
+﻿function TabIncident() {
+ 
 }
