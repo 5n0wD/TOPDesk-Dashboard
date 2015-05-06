@@ -39,7 +39,8 @@
                 <SortedDescendingCellStyle BackColor="#CAC9C9" />
                 <SortedDescendingHeaderStyle BackColor="#000065" />
             </asp:GridView>
-            <asp:SqlDataSource ID="WijzigingsDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:topdesk5ConnectionString %>" SelectCommand="select c.number as &quot;Nummer&quot;,isnull(ca.number,'nog geen activiteit(en)') as &quot;Actviteit&quot;,isnull(ca.briefdescription,'nog geen beschrijving') as &quot;briefdescription&quot;,c.ref_category_name +  ' - ' + c.ref_subcategory_name as &quot;categorie en subcategorie&quot;, cast(c.dataanmk as date) as &quot;aanmaak datum&quot;, cast(c.datwijzig as date) as &quot;wijzigings datum&quot;,cast(c.plannedfinaldate as date) as &quot;Eind datum&quot;,c.[description] as &quot;beschrijving&quot;,isnull(ca.[action],'nog geen actie') as &quot;action&quot;
+            <asp:SqlDataSource ID="WijzigingsDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:topdesk5ConnectionString %>"
+                SelectCommand="select c.number as &quot;Nummer&quot;,isnull(ca.number,'nog geen activiteit(en)') as &quot;Actviteit&quot;,isnull(ca.briefdescription,'nog geen beschrijving') as &quot;briefdescription&quot;,c.ref_category_name +  ' - ' + c.ref_subcategory_name as &quot;categorie en subcategorie&quot;, cast(c.dataanmk as date) as &quot;aanmaak datum&quot;, cast(c.datwijzig as date) as &quot;wijzigings datum&quot;,cast(c.plannedfinaldate as date) as &quot;Eind datum&quot;,c.[description] as &quot;beschrijving&quot;,isnull(ca.[action],'nog geen actie') as &quot;action&quot;
 from change c
 left outer join changeactivity ca on ca.ref_change_number = c.number
 where datepart(yyyy,c.plannedfinaldate) not like 2013 and c.plannedfinaldate &gt;= SYSDATETIME()
@@ -63,13 +64,6 @@ order by c.plannedfinaldate asc"></asp:SqlDataSource>
                     </asp:TableRow>
                     <asp:TableRow>
                         <asp:TableCell>
-                            <asp:Label runat="server" Text="Streef Datum:"></asp:Label></asp:TableCell>
-                        <asp:TableCell>
-                            <asp:TextBox ID="txtStreefDatum" runat="server" ReadOnly="True"></asp:TextBox>
-                        </asp:TableCell>
-                    </asp:TableRow>
-                    <asp:TableRow>
-                        <asp:TableCell>
                             <asp:Label runat="server" Text="Aanmeld Datum:"></asp:Label>
                         </asp:TableCell>
                         <asp:TableCell>
@@ -86,10 +80,9 @@ order by c.plannedfinaldate asc"></asp:SqlDataSource>
                     </asp:TableRow>
                     <asp:TableRow>
                         <asp:TableCell>
-                            <asp:Label runat="server" Text="Status:"></asp:Label>
-                        </asp:TableCell>
+                            <asp:Label runat="server" Text="Streef Datum:"></asp:Label></asp:TableCell>
                         <asp:TableCell>
-                            <asp:TextBox ID="txtStatus" runat="server" ReadOnly="True"></asp:TextBox>
+                            <asp:TextBox ID="txtStreefDatum" runat="server" ReadOnly="True"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow>

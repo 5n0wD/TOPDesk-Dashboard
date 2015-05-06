@@ -12,7 +12,7 @@
 
     <div id="DivContent1">
         <div id="IncidentenEnWijzigingen">
-
+             
             <div id="IncidentenDiv">
                 <p class="InfoParagraph">Incidenten</p>
                 <asp:Table ID="IncidentenTable" runat="server">

@@ -67,15 +67,6 @@ namespace Topdesk_Dashboard {
         protected global::System.Web.UI.WebControls.TextBox txtActiviteitNaam;
         
         /// <summary>
-        /// txtStreefDatum control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtStreefDatum;
-        
-        /// <summary>
         /// txtAanmeldDatum control.
         /// </summary>
         /// <remarks>
@@ -94,13 +85,13 @@ namespace Topdesk_Dashboard {
         protected global::System.Web.UI.WebControls.TextBox txtWijzigingsDatum;
         
         /// <summary>
-        /// txtStatus control.
+        /// txtStreefDatum control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtStatus;
+        protected global::System.Web.UI.WebControls.TextBox txtStreefDatum;
         
         /// <summary>
         /// txtKorteOmschrijving control.

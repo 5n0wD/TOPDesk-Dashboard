@@ -69,7 +69,6 @@ namespace Topdesk_Dashboard
                     foreach (TableCell cell in e.Row.Cells)
                         cell.Font.Italic = true;
                 }
-
                 #endregion
             }
         }

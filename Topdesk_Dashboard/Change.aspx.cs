@@ -13,7 +13,9 @@ namespace Topdesk_Dashboard
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //
+            //
+            //
         }
 
         protected void dgvChangeInfo_PageIndexChanging(object sender, GridViewPageEventArgs e)
@@ -52,7 +54,9 @@ namespace Topdesk_Dashboard
                         cell.BackColor = Color.FromName("lightblue");
                 }
                 #endregion
-                
+                //als streefdatum in de toekomst ligt zou er niets moeten gebeuren
+
+
                 #region nieuw aangemaakt
                 if (aanmaakDatum == vandaag)
                 {
@@ -68,7 +72,6 @@ namespace Topdesk_Dashboard
                 }
                 #endregion
             }
-
         }
         protected void dgvChangeInfo_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -91,17 +94,14 @@ namespace Topdesk_Dashboard
                 }
             }
 
-            dgvChangeInfo.SelectedIndex = 0;
-
             GridViewRow dgvRow = dgvChangeInfo.SelectedRow;
 
             txtWijzigingNaam.Text = dgvRow.Cells[0].Text;
             txtActiviteitNaam.Text = dgvRow.Cells[1].Text;
-            txtStreefDatum.Text = dgvRow.Cells[2].Text;
-            txtAanmeldDatum.Text = dgvRow.Cells[3].Text;
-            txtWijzigingsDatum.Text = dgvRow.Cells[4].Text;
-            txtStatus.Text = dgvRow.Cells[5].Text;
-            txtKorteOmschrijving.Text = dgvRow.Cells[6].Text;
+            txtStreefDatum.Text = dgvRow.Cells[6].Text;
+            txtAanmeldDatum.Text = dgvRow.Cells[4].Text;
+            txtWijzigingsDatum.Text = dgvRow.Cells[5].Text;
+            txtKorteOmschrijving.Text = dgvRow.Cells[2].Text;
             txtActie.Text = dgvRow.Cells[7].Text;
         }
         protected void dgvChangeInfo_PageIndexChanged(object sender, EventArgs e)
@@ -112,11 +112,10 @@ namespace Topdesk_Dashboard
 
             txtWijzigingNaam.Text = dgvRow.Cells[0].Text;
             txtActiviteitNaam.Text = dgvRow.Cells[1].Text;
-            txtStreefDatum.Text = dgvRow.Cells[2].Text;
-            txtAanmeldDatum.Text = dgvRow.Cells[3].Text;
-            txtWijzigingsDatum.Text = dgvRow.Cells[4].Text;
-            txtStatus.Text = dgvRow.Cells[5].Text;
-            txtKorteOmschrijving.Text = dgvRow.Cells[6].Text;
+            txtStreefDatum.Text = dgvRow.Cells[6].Text;
+            txtAanmeldDatum.Text = dgvRow.Cells[4].Text;
+            txtWijzigingsDatum.Text = dgvRow.Cells[5].Text;
+            txtKorteOmschrijving.Text = dgvRow.Cells[2].Text;
             txtActie.Text = dgvRow.Cells[7].Text;
         }
     }
