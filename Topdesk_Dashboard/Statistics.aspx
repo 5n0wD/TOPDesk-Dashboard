@@ -3,6 +3,7 @@
 <%-- V1.1 --%>
 <%@ Register Assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI.DataVisualization.Charting" TagPrefix="asp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Stylesheets" runat="server">
+    <script src="ScriptFile.js" type="text/javascript"></script>
     <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
 </asp:Content>
 
@@ -108,18 +109,23 @@
                 </asp:Table>
             </div>
         </div>
+        <button id="btnIncident" type="button" onclick="TabIncident()">Incidenten</button>
+        <button id="btnChange" type="button" onclick="TabWijziging()">Wijzigingen</button>
     </div>
+    <asp:UpdatePanel runat="server" UpdateMode="Conditional">
+        <ContentTemplate>
+            <table>
+                <tr>
+                    <td>
+                        <div id="tabContentDiv" runat="server" class="TabContentDiv">
 
-    <asp:Button ID="btnIncident" runat="server" Text="Incident" OnClick="TabIncident()" />
-    <asp:Table ID="tblTab" runat="server">
-        <asp:TableRow>
-            <asp:TableCell ID="tblTabCell">
-                <div id="tabContent">
-
-                </div>
-            </asp:TableCell>
-        </asp:TableRow>
-    </asp:Table>
+                            <object id="tabContent" type=text/html></object>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </ContentTemplate>
+    </asp:UpdatePanel>
     <div id="DivContent3">
 
         <p class="Paragraph">Aantal meldingen dat binnenkort moeten worden opgelost</p>

@@ -18,6 +18,8 @@ namespace Topdesk_Dashboard
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            tabContentDiv.InnerHtml = @"<object type= text/html data= IncidentStats.aspx></objects>";
+
             #region Datetime settings
             DateTime vandaag = DateTime.Today;//vandaag
             DateTime gisteren = DateTime.Today.AddDays(-1).Date; //gisteren
