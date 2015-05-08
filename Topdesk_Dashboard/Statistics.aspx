@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="Statistics" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Statistics.aspx.cs" Inherits="Topdesk_Dashboard.Statistics" %>
 
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+
 <%-- V1.1 --%>
 <%@ Register Assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI.DataVisualization.Charting" TagPrefix="asp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Stylesheets" runat="server">
@@ -109,26 +111,24 @@
                 </asp:Table>
             </div>
         </div>
-        
-
     </div>
-    <asp:UpdatePanel runat="server" UpdateMode="Conditional">
-        <ContentTemplate>
-            <asp:Button ID="btnChange" OnClick="TabChange" runat="server" Text="Wijziging/Incidenten" />
-            <table>
-                <tr>
-                    <td>
-                        <div id="tabContentDiv" runat="server">
-                            <object id="tabContent" class="TabContentDiv" type="text/html">
-                            </object>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </ContentTemplate>
-    </asp:UpdatePanel>
-    <div id="DivContent3">
 
+    <cc1:TabContainer ID="tabContInciWijzig" runat="server">
+        <cc1:TabPanel runat="server" ID="tabPnlInci" CssClass="TabContPanel" HeaderText="Incidenten">
+            <ContentTemplate>
+                <asp:TextBox runat="server"></asp:TextBox>
+                <asp:TextBox runat="server"></asp:TextBox>
+            </ContentTemplate>
+        </cc1:TabPanel>
+        <cc1:TabPanel runat="server" ID="tabPnlWijz" CssClass="TabContPanel" HeaderText="Wijzigingen">
+            <ContentTemplate>
+                <asp:TextBox runat="server"></asp:TextBox>
+                <asp:TextBox runat="server"></asp:TextBox>
+            </ContentTemplate>
+        </cc1:TabPanel>
+    </cc1:TabContainer>
+
+    <div id="DivContent3">
         <p class="Paragraph">Aantal meldingen dat binnenkort moeten worden opgelost</p>
         <div class="ChartDiv">
             <asp:Chart ID="Chart3" runat="server" DataSourceID="StillToComeDataSource" Height="200px" Width="900px" Palette="Bright">

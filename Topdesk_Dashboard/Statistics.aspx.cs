@@ -255,18 +255,5 @@ namespace Topdesk_Dashboard
             myFs.Close();
             return objCounterlist;
         }
-
-        protected void TabChange(object sender, EventArgs e)
-        {
-            if (IsPostBack)
-            {
-                // wisselen van de getoonde informatie
-                // als op de knop word geklikt dan veranderd en info ipv incidenten naar wijzigingen en vice versa
-                //Page.ClientScript.RegisterStartupScript(this.GetType(), "TabIncident", "TabIncident()", true);
-
-                tabContentDiv.ResolveUrl("IncidentStats.aspx");
-
-            }
-        }
     }
 }
