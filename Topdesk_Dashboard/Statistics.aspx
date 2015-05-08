@@ -116,14 +116,13 @@
     <cc1:TabContainer ID="tabContInciWijzig" runat="server">
         <cc1:TabPanel runat="server" ID="tabPnlInci" CssClass="TabContPanel" HeaderText="Incidenten">
             <ContentTemplate>
-                <asp:TextBox runat="server"></asp:TextBox>
-                <asp:TextBox runat="server"></asp:TextBox>
+                <iframe src="IncidentStats.aspx" runat="server"></iframe>
             </ContentTemplate>
         </cc1:TabPanel>
         <cc1:TabPanel runat="server" ID="tabPnlWijz" CssClass="TabContPanel" HeaderText="Wijzigingen">
             <ContentTemplate>
-                <asp:TextBox runat="server"></asp:TextBox>
-                <asp:TextBox runat="server"></asp:TextBox>
+
+                <iframe src="ChangeStats.aspx" runat="server"></iframe>
             </ContentTemplate>
         </cc1:TabPanel>
     </cc1:TabContainer>
