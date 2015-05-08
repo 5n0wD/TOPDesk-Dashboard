@@ -18,7 +18,10 @@ namespace Topdesk_Dashboard
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            tabContentDiv.InnerHtml = @"<object type= text/html data= IncidentStats.aspx></objects>";
+            if(!IsPostBack)
+            {
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "TabIncident", "TabIncident()", true);
+            }
 
             #region Datetime settings
             DateTime vandaag = DateTime.Today;//vandaag

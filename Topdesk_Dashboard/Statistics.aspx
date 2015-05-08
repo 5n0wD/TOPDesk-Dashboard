@@ -109,17 +109,17 @@
                 </asp:Table>
             </div>
         </div>
-        <button id="btnIncident" type="button" onclick="TabIncident()">Incidenten</button>
-        <button id="btnChange" type="button" onclick="TabWijziging()">Wijzigingen</button>
+        <button id="btnIncident" onclick="TabIncident()">Incidenten</button>
+        <button id="btnChange" onclick="TabWijziging()">Wijzigingen</button>
     </div>
     <asp:UpdatePanel runat="server" UpdateMode="Conditional">
         <ContentTemplate>
             <table>
                 <tr>
                     <td>
-                        <div id="tabContentDiv" runat="server" class="TabContentDiv">
+                        <div id="tabContentDiv" runat="server">
 
-                            <object id="tabContent" type=text/html></object>
+                            <object id="tabContent" class="TabContentDiv" type="text/html"></object>
                         </div>
                     </td>
                 </tr>
