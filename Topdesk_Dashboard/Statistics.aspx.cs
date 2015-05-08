@@ -263,6 +263,10 @@ namespace Topdesk_Dashboard
         {
             if (!IsPostBack)
             {
+                // wisselen van de getoonde informatie
+                // als op de knop word geklikt dan veranderd en info ipv incidenten naar wijzigingen en vice versa
+
+
 
             }
         }

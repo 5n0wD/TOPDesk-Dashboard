@@ -109,7 +109,7 @@
                 </asp:Table>
             </div>
         </div>
-
+        
         <asp:Button ID="btnChange" OnClick="TabChange" runat="server" Text="Wijziging/Incidenten" />
     </div>
     <asp:UpdatePanel runat="server" UpdateMode="Conditional">
