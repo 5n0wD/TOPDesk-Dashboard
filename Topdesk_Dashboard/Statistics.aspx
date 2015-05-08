@@ -110,16 +110,17 @@
             </div>
         </div>
         
-        <asp:Button ID="btnChange" OnClick="TabChange" runat="server" Text="Wijziging/Incidenten" />
+
     </div>
     <asp:UpdatePanel runat="server" UpdateMode="Conditional">
         <ContentTemplate>
+            <asp:Button ID="btnChange" OnClick="TabChange" runat="server" Text="Wijziging/Incidenten" />
             <table>
                 <tr>
                     <td>
                         <div id="tabContentDiv" runat="server">
-
-                            <object id="tabContent" class="TabContentDiv" type="text/html"></object>
+                            <object id="tabContent" class="TabContentDiv" type="text/html">
+                            </object>
                         </div>
                     </td>
                 </tr>

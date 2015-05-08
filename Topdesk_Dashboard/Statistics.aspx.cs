@@ -12,16 +12,13 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Xml;
 using System.Xml.Serialization;
 
+
 namespace Topdesk_Dashboard
 { //V1.1
     public partial class Statistics : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "TabIncident", "TabIncident()", true);
-            }
 
             #region Datetime settings
             DateTime vandaag = DateTime.Today;//vandaag
@@ -261,12 +258,13 @@ namespace Topdesk_Dashboard
 
         protected void TabChange(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (IsPostBack)
             {
                 // wisselen van de getoonde informatie
                 // als op de knop word geklikt dan veranderd en info ipv incidenten naar wijzigingen en vice versa
+                //Page.ClientScript.RegisterStartupScript(this.GetType(), "TabIncident", "TabIncident()", true);
 
-
+                tabContentDiv.ResolveUrl("IncidentStats.aspx");
 
             }
         }
