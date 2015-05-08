@@ -109,8 +109,8 @@
                 </asp:Table>
             </div>
         </div>
-        <button id="btnIncident" onclick="TabIncident()">Incidenten</button>
-        <button id="btnChange" onclick="TabWijziging()">Wijzigingen</button>
+
+        <asp:Button ID="btnChange" OnClick="TabChange" runat="server" Text="Wijziging/Incidenten" />
     </div>
     <asp:UpdatePanel runat="server" UpdateMode="Conditional">
         <ContentTemplate>

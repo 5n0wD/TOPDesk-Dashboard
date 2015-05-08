@@ -18,7 +18,7 @@ namespace Topdesk_Dashboard
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            if (!IsPostBack)
             {
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "TabIncident", "TabIncident()", true);
             }
@@ -257,6 +257,14 @@ namespace Topdesk_Dashboard
 
             myFs.Close();
             return objCounterlist;
+        }
+
+        protected void TabChange(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+
+            }
         }
     }
 }
