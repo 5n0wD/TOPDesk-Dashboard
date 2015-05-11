@@ -118,9 +118,9 @@ body {
     background-color: mistyrose;
 }
 
-#AuthNonImpl {
-    float: right;
-    background-color: rosybrown;
+#RFC {
+    float: left;
+    background-color: chocolate;
 }
 
 #chartdiv {
@@ -128,6 +128,15 @@ body {
     overflow: hidden;
 }
 
+#ifrm {
+    width: 900px;
+    height: 900px;
+}
+
+#tabContInciWijzig {
+    width: 1000px;
+    height: 1000px;
+}
 
 /*Classes*/
 .Paragraph {

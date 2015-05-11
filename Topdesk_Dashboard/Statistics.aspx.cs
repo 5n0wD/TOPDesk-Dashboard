@@ -12,39 +12,21 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Xml;
 using System.Xml.Serialization;
 
-
 namespace Topdesk_Dashboard
 { //V1.1
     public partial class Statistics : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            #region Datetime settings
+            #region Datetime settings + instantie
             DateTime vandaag = DateTime.Today;//vandaag
             DateTime gisteren = DateTime.Today.AddDays(-1).Date; //gisteren
             DateTime eindGisteren = DateTime.Today.Date.AddSeconds(-1); //laatste seconde van gisteren
             DateTime beginVorigJaar = new DateTime(2014, 1, 1); //begin vorig jaar aangegeven als jaar,maand,dag
             DateTime tienTerugDatum = DateTime.Today.AddDays(-10); //10 dagen terug
             DateTime tienVerderDatum = DateTime.Today.AddDays(10);
-            #endregion
 
-            #region chart settings
-            /*
-             * instellingen voor de chart bovenste (in de webpagina) grafiek
-             * AxisX bevat instellingen voor de X as
-             * AxisY bevat instellingen voor de Y as
-             */
-
-            Chart3.ChartAreas[0].AxisX.Maximum = tienVerderDatum.ToOADate();
-            Chart3.ChartAreas[0].AxisX.Minimum = vandaag.ToOADate();
-            Chart3.ChartAreas[0].AxisY.Minimum = 0;
-            Chart3.ChartAreas[0].AxisY.Maximum = 20;
-
-            Chart2.ChartAreas[0].AxisX.Maximum = vandaag.ToOADate();
-            Chart2.ChartAreas[0].AxisX.Minimum = tienTerugDatum.ToOADate();
-            Chart2.ChartAreas[0].AxisY.Minimum = 0;
-            Chart2.ChartAreas[0].AxisY.Maximum = 20;
+            topdesk5Entities TopDeskModel = new topdesk5Entities();
             #endregion
 
             #region LInQ uitleg
@@ -57,9 +39,7 @@ namespace Topdesk_Dashboard
              */
             #endregion
 
-            topdesk5Entities TopDeskModel = new topdesk5Entities();
-
-            #region LInQ voor Incidenten
+            #region Statistieken van Incidenten en Wijzigingen
             var countTotal = (from cntTotal in TopDeskModel.incidents
                               where cntTotal.dataanmk > beginVorigJaar && cntTotal.afgemeld == false && cntTotal.status != -1
                               select cntTotal.naam).Count();
@@ -91,9 +71,7 @@ namespace Topdesk_Dashboard
                                   (cntYester.afgemeld == false)
                                   select cntYester.naam).Count();
             txtTotalYesterday.Text = countYesterday.ToString();
-            #endregion
 
-            #region LInQ voor Wijzigingen
             var countWijzigTotal = (from cntwijzTotal in TopDeskModel.changes
                                     where cntwijzTotal.plannedfinaldate >= gisteren
                                     select cntwijzTotal.number).Count();
@@ -105,6 +83,18 @@ namespace Topdesk_Dashboard
                                   select cntAanvrg.number).Count();
 
             txtAantalWijzigAanvrg.Text = countAanvragen.ToString();
+
+            var countOpenEval = (from cntOpEv in TopDeskModel.changes
+                                 where cntOpEv.implementationdate != null && cntOpEv.finaldate == null
+                                 select cntOpEv.number).Count();
+
+            txtEval.Text = countOpenEval.ToString();
+
+            var countComingChanges = (from cntCmngChanges in TopDeskModel.changes
+                                  where cntCmngChanges.authorizationdate != null && cntCmngChanges.rejecteddate == null
+                                  select cntCmngChanges.number).Count();
+
+            txtCntToRealize.Text = countComingChanges.ToString();
 
 
             #endregion
@@ -123,16 +113,6 @@ namespace Topdesk_Dashboard
             }
             #endregion
 
-            #region Meldingen die op dit moment geen streefdatum hebben
-            var anontype = (from anont in TopDeskModel.incidents
-                            where anont.datumafgemeld == null && anont.status != -1 && anont.datumafspraak == null
-                            orderby anont.datumafspraak ascending, anont.naam descending
-                            select new { anont.naam, anont.dataanmk, anont.korteomschrijving }).ToList();
-
-            GridView1.DataSource = anontype;
-            GridView1.DataBind();
-
-            #endregion
 
             #region belangrijke stuff
             CounterClass objCounter = new CounterClass();
@@ -175,7 +155,6 @@ namespace Topdesk_Dashboard
                     tmrAutoRefresh.Enabled = true; // als het 8 uur 's morgens is geweest start de timer
                     NewListObj = DeserializeListFromXML(listpath);
                     NewListObj.CountList.Add(objCounter);
-
                 }
             }
             #endregion
