@@ -27,5 +27,6 @@ namespace Topdesk_Dashboard
     
         public DbSet<change> changes { get; set; }
         public DbSet<incident> incidents { get; set; }
+        public DbSet<changeactivity> changeactivities { get; set; }
     }
 }

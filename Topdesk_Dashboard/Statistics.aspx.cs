@@ -43,13 +43,13 @@ namespace Topdesk_Dashboard
             var countTotal = (from cntTotal in TopDeskModel.incidents
                               where cntTotal.dataanmk > beginVorigJaar && cntTotal.afgemeld == false && cntTotal.status != -1
                               select cntTotal.naam).Count();
-
             txtTotalAmount.Text = countTotal.ToString();
+
             var countTotalExceeded = (from cntTotExc in TopDeskModel.incidents
                                       where cntTotExc.datumafspraak < vandaag && cntTotExc.afgemeld == false
                                       select cntTotExc.naam).Count();
-
             txtTotalExceeded.Text = countTotalExceeded.ToString();
+
             var countUpComing = (from cntUpComing in TopDeskModel.incidents
                                  where cntUpComing.datumafspraak > vandaag && cntUpComing.afgemeld == false
                                  select cntUpComing).Count();
@@ -75,27 +75,29 @@ namespace Topdesk_Dashboard
             var countWijzigTotal = (from cntwijzTotal in TopDeskModel.changes
                                     where cntwijzTotal.plannedfinaldate >= gisteren
                                     select cntwijzTotal.number).Count();
-
             txtCountWijzig.Text = countWijzigTotal.ToString();
 
             var countAanvragen = (from cntAanvrg in TopDeskModel.changes
                                   where cntAanvrg.rejecteddate == null && cntAanvrg.authorizationdate == null
                                   select cntAanvrg.number).Count();
-
             txtAantalWijzigAanvrg.Text = countAanvragen.ToString();
 
             var countOpenEval = (from cntOpEv in TopDeskModel.changes
                                  where cntOpEv.implementationdate != null && cntOpEv.finaldate == null
                                  select cntOpEv.number).Count();
-
             txtEval.Text = countOpenEval.ToString();
 
             var countComingChanges = (from cntCmngChanges in TopDeskModel.changes
-                                  where cntCmngChanges.authorizationdate != null && cntCmngChanges.rejecteddate == null
-                                  select cntCmngChanges.number).Count();
-
+                                      where cntCmngChanges.authorizationdate != null && cntCmngChanges.rejecteddate == null
+                                      select cntCmngChanges.number).Count();
             txtCntToRealize.Text = countComingChanges.ToString();
 
+            var countActivities = (from cntAct in TopDeskModel.changeactivities
+                                   where cntAct.plannedfinaldate >= vandaag && cntAct.rejected == false && cntAct.resolved == false //
+                                   select cntAct.number).Count();
+            txtAantalActiviteiten.Text = countActivities.ToString();
+
+            
 
             #endregion
 

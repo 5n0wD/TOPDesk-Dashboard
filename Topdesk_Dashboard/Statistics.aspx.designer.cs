@@ -229,13 +229,13 @@ namespace Topdesk_Dashboard {
         protected global::System.Web.UI.WebControls.TextBox txtAuthorisedNonImpl;
         
         /// <summary>
-        /// Label5 control.
+        /// lblCntToRealize control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
+        protected global::System.Web.UI.WebControls.Label lblCntToRealize;
         
         /// <summary>
         /// txtCntToRealize control.
@@ -247,13 +247,13 @@ namespace Topdesk_Dashboard {
         protected global::System.Web.UI.WebControls.TextBox txtCntToRealize;
         
         /// <summary>
-        /// Label6 control.
+        /// lblEval control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
+        protected global::System.Web.UI.WebControls.Label lblEval;
         
         /// <summary>
         /// txtEval control.

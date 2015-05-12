@@ -22,13 +22,13 @@ namespace Topdesk_Dashboard {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Chart1 control.
+        /// activityChart control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.DataVisualization.Charting.Chart Chart1;
+        protected global::System.Web.UI.DataVisualization.Charting.Chart activityChart;
         
         /// <summary>
         /// sqlDatasrcOpenstaand control.
@@ -40,13 +40,13 @@ namespace Topdesk_Dashboard {
         protected global::System.Web.UI.WebControls.SqlDataSource sqlDatasrcOpenstaand;
         
         /// <summary>
-        /// AuthnonimplGrid control.
+        /// dgvReqForChanges control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView AuthnonimplGrid;
+        protected global::System.Web.UI.WebControls.GridView dgvReqForChanges;
         
         /// <summary>
         /// sqlDSAuthNonImpl control.

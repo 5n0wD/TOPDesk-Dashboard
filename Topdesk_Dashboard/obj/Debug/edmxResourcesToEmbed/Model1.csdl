@@ -179,6 +179,7 @@
     <Property Name="ref_operatorname" Type="String" MaxLength="109" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="appointmentid" Type="Guid" />
     <NavigationProperty Name="incident" Relationship="Self.fk_incident_incidentid_change" FromRole="change" ToRole="incident" />
+    <NavigationProperty Name="changeactivities" Relationship="topdesk5Model.fk_change_changeid_changeactivity" FromRole="change" ToRole="changeactivity" />
   </EntityType>
   <EntityType Name="incident">
     <Key>
@@ -410,5 +411,149 @@
       <End Role="incident" EntitySet="incidents" />
       <End Role="incident1" EntitySet="incidents" />
     </AssociationSet>
+    <EntitySet Name="changeactivities" EntityType="topdesk5Model.changeactivity" />
+    <AssociationSet Name="fk_change_changeid_changeactivity" Association="topdesk5Model.fk_change_changeid_changeactivity">
+      <End Role="change" EntitySet="changes" />
+      <End Role="changeactivity" EntitySet="changeactivities" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="changeactivity">
+    <Key>
+      <PropertyRef Name="unid" />
+    </Key>
+    <Property Name="action" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="activitytemplateid" Type="Guid" />
+    <Property Name="approved" Type="Boolean" Nullable="false" />
+    <Property Name="approveddate" Type="DateTime" Precision="3" />
+    <Property Name="archivereasonid" Type="Guid" />
+    <Property Name="briefdescription" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="categoryid" Type="Guid" />
+    <Property Name="changeid" Type="Guid" Nullable="false" />
+    <Property Name="comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="currentplanexpenses" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="currentplantimetaken" Type="Int64" Nullable="false" />
+    <Property Name="dataanmk" Type="DateTime" Precision="3" />
+    <Property Name="datwijzig" Type="DateTime" Precision="3" />
+    <Property Name="decidedby" Type="Int32" Nullable="false" />
+    <Property Name="decidedbypersonid" Type="Guid" />
+    <Property Name="expectedexpenses" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="expectedtimetaken" Type="Int64" Nullable="false" />
+    <Property Name="expenses" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="groupid" Type="Guid" />
+    <Property Name="importtype" Type="Int32" Nullable="false" />
+    <Property Name="milestoneid" Type="Guid" />
+    <Property Name="number" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="operatorgroupid" Type="Guid" />
+    <Property Name="operatorid" Type="Guid" />
+    <Property Name="originalplanexpenses" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="originalplantimetaken" Type="Int64" Nullable="false" />
+    <Property Name="changephase" Type="Int32" Nullable="false" />
+    <Property Name="plannedfinaldate" Type="DateTime" Precision="3" />
+    <Property Name="plannedstartdate" Type="DateTime" Precision="3" />
+    <Property Name="planningfixed" Type="Int32" Nullable="false" />
+    <Property Name="realizedexpenses" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="rejected" Type="Boolean" Nullable="false" />
+    <Property Name="rejecteddate" Type="DateTime" Precision="3" />
+    <Property Name="rejectionreasonid" Type="Guid" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="resolved" Type="Boolean" Nullable="false" />
+    <Property Name="resolveddate" Type="DateTime" Precision="3" />
+    <Property Name="skipped" Type="Boolean" Nullable="false" />
+    <Property Name="skippeddate" Type="DateTime" Precision="3" />
+    <Property Name="skippedreasonid" Type="Guid" />
+    <Property Name="started" Type="Boolean" Nullable="false" />
+    <Property Name="starteddate" Type="DateTime" Precision="3" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <Property Name="subcategoryid" Type="Guid" />
+    <Property Name="timetaken" Type="Int64" Nullable="false" />
+    <Property Name="uidaanmk" Type="Guid" />
+    <Property Name="uidwijzig" Type="Guid" />
+    <Property Name="unid" Type="Guid" Nullable="false" />
+    <Property Name="vrijedatum1" Type="DateTime" Precision="3" />
+    <Property Name="vrijegetal1" Type="Double" Nullable="false" />
+    <Property Name="vrijelogisch1" Type="Boolean" Nullable="false" />
+    <Property Name="vrijememo1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vrijeopzoek1" Type="Guid" />
+    <Property Name="vrijetekst1" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="vrijedatum2" Type="DateTime" Precision="3" />
+    <Property Name="vrijegetal2" Type="Double" Nullable="false" />
+    <Property Name="vrijelogisch2" Type="Boolean" Nullable="false" />
+    <Property Name="vrijememo2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vrijeopzoek2" Type="Guid" />
+    <Property Name="vrijetekst2" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="vrijedatum3" Type="DateTime" Precision="3" />
+    <Property Name="vrijegetal3" Type="Double" Nullable="false" />
+    <Property Name="vrijelogisch3" Type="Boolean" Nullable="false" />
+    <Property Name="vrijememo3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vrijeopzoek3" Type="Guid" />
+    <Property Name="vrijetekst3" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="vrijedatum4" Type="DateTime" Precision="3" />
+    <Property Name="vrijegetal4" Type="Double" Nullable="false" />
+    <Property Name="vrijelogisch4" Type="Boolean" Nullable="false" />
+    <Property Name="vrijememo4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vrijeopzoek4" Type="Guid" />
+    <Property Name="vrijetekst4" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="vrijedatum5" Type="DateTime" Precision="3" />
+    <Property Name="vrijegetal5" Type="Double" Nullable="false" />
+    <Property Name="vrijelogisch5" Type="Boolean" Nullable="false" />
+    <Property Name="vrijememo5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vrijeopzoek5" Type="Guid" />
+    <Property Name="vrijetekst5" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="attvrijedatum1" Type="DateTime" Precision="3" />
+    <Property Name="attvrijegetal1" Type="Double" Nullable="false" />
+    <Property Name="attvrijelogisch1" Type="Boolean" Nullable="false" />
+    <Property Name="attvrijememo1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="attvrijeopzoek1" Type="Guid" />
+    <Property Name="attvrijetekst1" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="attvrijedatum2" Type="DateTime" Precision="3" />
+    <Property Name="attvrijegetal2" Type="Double" Nullable="false" />
+    <Property Name="attvrijelogisch2" Type="Boolean" Nullable="false" />
+    <Property Name="attvrijememo2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="attvrijeopzoek2" Type="Guid" />
+    <Property Name="attvrijetekst2" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="attvrijedatum3" Type="DateTime" Precision="3" />
+    <Property Name="attvrijegetal3" Type="Double" Nullable="false" />
+    <Property Name="attvrijelogisch3" Type="Boolean" Nullable="false" />
+    <Property Name="attvrijememo3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="attvrijeopzoek3" Type="Guid" />
+    <Property Name="attvrijetekst3" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="attvrijedatum4" Type="DateTime" Precision="3" />
+    <Property Name="attvrijegetal4" Type="Double" Nullable="false" />
+    <Property Name="attvrijelogisch4" Type="Boolean" Nullable="false" />
+    <Property Name="attvrijememo4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="attvrijeopzoek4" Type="Guid" />
+    <Property Name="attvrijetekst4" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="attvrijedatum5" Type="DateTime" Precision="3" />
+    <Property Name="attvrijegetal5" Type="Double" Nullable="false" />
+    <Property Name="attvrijelogisch5" Type="Boolean" Nullable="false" />
+    <Property Name="attvrijememo5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="attvrijeopzoek5" Type="Guid" />
+    <Property Name="attvrijetekst5" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="duration_in_workdays" Type="Int64" Nullable="false" />
+    <Property Name="duration_in_minutes" Type="Int64" Nullable="false" />
+    <Property Name="bespokememo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="activitystatusid" Type="Guid" />
+    <Property Name="maystart" Type="Boolean" Nullable="false" />
+    <Property Name="importid" Type="String" Nullable="false" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="importdate" Type="DateTime" Precision="3" />
+    <Property Name="monitored" Type="Boolean" Nullable="false" />
+    <Property Name="ref_operator_name" Type="String" Nullable="false" MaxLength="109" FixedLength="false" Unicode="true" />
+    <Property Name="ref_change_brief_description" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="ref_change_number" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="appointmentid" Type="Guid" />
+    <Property Name="displayincalendar" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="change" Relationship="topdesk5Model.fk_change_changeid_changeactivity" FromRole="changeactivity" ToRole="change" />
+  </EntityType>
+  <Association Name="fk_change_changeid_changeactivity">
+    <End Type="topdesk5Model.change" Role="change" Multiplicity="1" />
+    <End Type="topdesk5Model.changeactivity" Role="changeactivity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="change">
+        <PropertyRef Name="unid" />
+      </Principal>
+      <Dependent Role="changeactivity">
+        <PropertyRef Name="changeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

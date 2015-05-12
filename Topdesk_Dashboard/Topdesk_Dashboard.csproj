@@ -121,6 +121,9 @@
     <Compile Include="change.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="changeactivity.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="ChangeStats.aspx.cs">
       <DependentUpon>ChangeStats.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

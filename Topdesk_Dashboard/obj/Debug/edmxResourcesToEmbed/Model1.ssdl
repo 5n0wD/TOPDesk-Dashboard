@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="topdesk5Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="topdesk5Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="change">
     <Key>
       <PropertyRef Name="unid" />
@@ -179,6 +179,132 @@
     <Property Name="ref_operatorname" Type="nvarchar" MaxLength="109" Nullable="false" />
     <Property Name="appointmentid" Type="uniqueidentifier" />
   </EntityType>
+  <EntityType Name="changeactivity">
+    <Key>
+      <PropertyRef Name="unid" />
+    </Key>
+    <Property Name="action" Type="ntext" />
+    <Property Name="activitytemplateid" Type="uniqueidentifier" />
+    <Property Name="approved" Type="bit" Nullable="false" />
+    <Property Name="approveddate" Type="datetime" />
+    <Property Name="archivereasonid" Type="uniqueidentifier" />
+    <Property Name="briefdescription" Type="nvarchar" MaxLength="80" Nullable="false" />
+    <Property Name="categoryid" Type="uniqueidentifier" />
+    <Property Name="changeid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="comments" Type="ntext" />
+    <Property Name="currentplanexpenses" Type="money" Nullable="false" />
+    <Property Name="currentplantimetaken" Type="bigint" Nullable="false" />
+    <Property Name="dataanmk" Type="datetime" />
+    <Property Name="datwijzig" Type="datetime" />
+    <Property Name="decidedby" Type="int" Nullable="false" />
+    <Property Name="decidedbypersonid" Type="uniqueidentifier" />
+    <Property Name="expectedexpenses" Type="money" Nullable="false" />
+    <Property Name="expectedtimetaken" Type="bigint" Nullable="false" />
+    <Property Name="expenses" Type="money" Nullable="false" />
+    <Property Name="groupid" Type="uniqueidentifier" />
+    <Property Name="importtype" Type="int" Nullable="false" />
+    <Property Name="milestoneid" Type="uniqueidentifier" />
+    <Property Name="number" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="operatorgroupid" Type="uniqueidentifier" />
+    <Property Name="operatorid" Type="uniqueidentifier" />
+    <Property Name="originalplanexpenses" Type="money" Nullable="false" />
+    <Property Name="originalplantimetaken" Type="bigint" Nullable="false" />
+    <Property Name="changephase" Type="int" Nullable="false" />
+    <Property Name="plannedfinaldate" Type="datetime" />
+    <Property Name="plannedstartdate" Type="datetime" />
+    <Property Name="planningfixed" Type="int" Nullable="false" />
+    <Property Name="realizedexpenses" Type="money" Nullable="false" />
+    <Property Name="rejected" Type="bit" Nullable="false" />
+    <Property Name="rejecteddate" Type="datetime" />
+    <Property Name="rejectionreasonid" Type="uniqueidentifier" />
+    <Property Name="description" Type="ntext" />
+    <Property Name="resolved" Type="bit" Nullable="false" />
+    <Property Name="resolveddate" Type="datetime" />
+    <Property Name="skipped" Type="bit" Nullable="false" />
+    <Property Name="skippeddate" Type="datetime" />
+    <Property Name="skippedreasonid" Type="uniqueidentifier" />
+    <Property Name="started" Type="bit" Nullable="false" />
+    <Property Name="starteddate" Type="datetime" />
+    <Property Name="status" Type="int" Nullable="false" />
+    <Property Name="subcategoryid" Type="uniqueidentifier" />
+    <Property Name="timetaken" Type="bigint" Nullable="false" />
+    <Property Name="uidaanmk" Type="uniqueidentifier" />
+    <Property Name="uidwijzig" Type="uniqueidentifier" />
+    <Property Name="unid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="vrijedatum1" Type="datetime" />
+    <Property Name="vrijegetal1" Type="float" Nullable="false" />
+    <Property Name="vrijelogisch1" Type="bit" Nullable="false" />
+    <Property Name="vrijememo1" Type="ntext" />
+    <Property Name="vrijeopzoek1" Type="uniqueidentifier" />
+    <Property Name="vrijetekst1" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="vrijedatum2" Type="datetime" />
+    <Property Name="vrijegetal2" Type="float" Nullable="false" />
+    <Property Name="vrijelogisch2" Type="bit" Nullable="false" />
+    <Property Name="vrijememo2" Type="ntext" />
+    <Property Name="vrijeopzoek2" Type="uniqueidentifier" />
+    <Property Name="vrijetekst2" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="vrijedatum3" Type="datetime" />
+    <Property Name="vrijegetal3" Type="float" Nullable="false" />
+    <Property Name="vrijelogisch3" Type="bit" Nullable="false" />
+    <Property Name="vrijememo3" Type="ntext" />
+    <Property Name="vrijeopzoek3" Type="uniqueidentifier" />
+    <Property Name="vrijetekst3" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="vrijedatum4" Type="datetime" />
+    <Property Name="vrijegetal4" Type="float" Nullable="false" />
+    <Property Name="vrijelogisch4" Type="bit" Nullable="false" />
+    <Property Name="vrijememo4" Type="ntext" />
+    <Property Name="vrijeopzoek4" Type="uniqueidentifier" />
+    <Property Name="vrijetekst4" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="vrijedatum5" Type="datetime" />
+    <Property Name="vrijegetal5" Type="float" Nullable="false" />
+    <Property Name="vrijelogisch5" Type="bit" Nullable="false" />
+    <Property Name="vrijememo5" Type="ntext" />
+    <Property Name="vrijeopzoek5" Type="uniqueidentifier" />
+    <Property Name="vrijetekst5" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="attvrijedatum1" Type="datetime" />
+    <Property Name="attvrijegetal1" Type="float" Nullable="false" />
+    <Property Name="attvrijelogisch1" Type="bit" Nullable="false" />
+    <Property Name="attvrijememo1" Type="ntext" />
+    <Property Name="attvrijeopzoek1" Type="uniqueidentifier" />
+    <Property Name="attvrijetekst1" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="attvrijedatum2" Type="datetime" />
+    <Property Name="attvrijegetal2" Type="float" Nullable="false" />
+    <Property Name="attvrijelogisch2" Type="bit" Nullable="false" />
+    <Property Name="attvrijememo2" Type="ntext" />
+    <Property Name="attvrijeopzoek2" Type="uniqueidentifier" />
+    <Property Name="attvrijetekst2" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="attvrijedatum3" Type="datetime" />
+    <Property Name="attvrijegetal3" Type="float" Nullable="false" />
+    <Property Name="attvrijelogisch3" Type="bit" Nullable="false" />
+    <Property Name="attvrijememo3" Type="ntext" />
+    <Property Name="attvrijeopzoek3" Type="uniqueidentifier" />
+    <Property Name="attvrijetekst3" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="attvrijedatum4" Type="datetime" />
+    <Property Name="attvrijegetal4" Type="float" Nullable="false" />
+    <Property Name="attvrijelogisch4" Type="bit" Nullable="false" />
+    <Property Name="attvrijememo4" Type="ntext" />
+    <Property Name="attvrijeopzoek4" Type="uniqueidentifier" />
+    <Property Name="attvrijetekst4" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="attvrijedatum5" Type="datetime" />
+    <Property Name="attvrijegetal5" Type="float" Nullable="false" />
+    <Property Name="attvrijelogisch5" Type="bit" Nullable="false" />
+    <Property Name="attvrijememo5" Type="ntext" />
+    <Property Name="attvrijeopzoek5" Type="uniqueidentifier" />
+    <Property Name="attvrijetekst5" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="duration_in_workdays" Type="bigint" Nullable="false" />
+    <Property Name="duration_in_minutes" Type="bigint" Nullable="false" />
+    <Property Name="bespokememo" Type="ntext" />
+    <Property Name="activitystatusid" Type="uniqueidentifier" />
+    <Property Name="maystart" Type="bit" Nullable="false" />
+    <Property Name="importid" Type="nvarchar" MaxLength="450" Nullable="false" />
+    <Property Name="importdate" Type="datetime" />
+    <Property Name="monitored" Type="bit" Nullable="false" />
+    <Property Name="ref_operator_name" Type="nvarchar" MaxLength="109" Nullable="false" />
+    <Property Name="ref_change_brief_description" Type="nvarchar" MaxLength="80" Nullable="false" />
+    <Property Name="ref_change_number" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="appointmentid" Type="uniqueidentifier" />
+    <Property Name="displayincalendar" Type="bit" Nullable="false" />
+  </EntityType>
   <EntityType Name="incident">
     <Key>
       <PropertyRef Name="unid" />
@@ -353,6 +479,18 @@
     <Property Name="ref_servicelevelid" Type="uniqueidentifier" />
     <Property Name="supplierserviceid" Type="uniqueidentifier" />
   </EntityType>
+  <Association Name="fk_change_changeid_changeactivity">
+    <End Role="change" Type="Self.change" Multiplicity="1" />
+    <End Role="changeactivity" Type="Self.changeactivity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="change">
+        <PropertyRef Name="unid" />
+      </Principal>
+      <Dependent Role="changeactivity">
+        <PropertyRef Name="changeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="fk_incident_incidentid_change">
     <End Role="incident" Type="Self.incident" Multiplicity="0..1" />
     <End Role="change" Type="Self.change" Multiplicity="*" />
@@ -391,7 +529,12 @@
   </Association>
   <EntityContainer Name="topdesk5ModelStoreContainer">
     <EntitySet Name="change" EntityType="Self.change" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="changeactivity" EntityType="Self.changeactivity" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="incident" EntityType="Self.incident" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="fk_change_changeid_changeactivity" Association="Self.fk_change_changeid_changeactivity">
+      <End Role="change" EntitySet="change" />
+      <End Role="changeactivity" EntitySet="changeactivity" />
+    </AssociationSet>
     <AssociationSet Name="fk_incident_incidentid_change" Association="Self.fk_incident_incidentid_change">
       <End Role="incident" EntitySet="incident" />
       <End Role="change" EntitySet="change" />

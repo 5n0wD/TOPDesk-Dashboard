@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="topdesk5Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="topdesk5Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="change">
           <Key>
             <PropertyRef Name="unid" />
@@ -184,6 +184,132 @@
           <Property Name="ref_operatorname" Type="nvarchar" MaxLength="109" Nullable="false" />
           <Property Name="appointmentid" Type="uniqueidentifier" />
         </EntityType>
+        <EntityType Name="changeactivity">
+          <Key>
+            <PropertyRef Name="unid" />
+          </Key>
+          <Property Name="action" Type="ntext" />
+          <Property Name="activitytemplateid" Type="uniqueidentifier" />
+          <Property Name="approved" Type="bit" Nullable="false" />
+          <Property Name="approveddate" Type="datetime" />
+          <Property Name="archivereasonid" Type="uniqueidentifier" />
+          <Property Name="briefdescription" Type="nvarchar" MaxLength="80" Nullable="false" />
+          <Property Name="categoryid" Type="uniqueidentifier" />
+          <Property Name="changeid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="comments" Type="ntext" />
+          <Property Name="currentplanexpenses" Type="money" Nullable="false" />
+          <Property Name="currentplantimetaken" Type="bigint" Nullable="false" />
+          <Property Name="dataanmk" Type="datetime" />
+          <Property Name="datwijzig" Type="datetime" />
+          <Property Name="decidedby" Type="int" Nullable="false" />
+          <Property Name="decidedbypersonid" Type="uniqueidentifier" />
+          <Property Name="expectedexpenses" Type="money" Nullable="false" />
+          <Property Name="expectedtimetaken" Type="bigint" Nullable="false" />
+          <Property Name="expenses" Type="money" Nullable="false" />
+          <Property Name="groupid" Type="uniqueidentifier" />
+          <Property Name="importtype" Type="int" Nullable="false" />
+          <Property Name="milestoneid" Type="uniqueidentifier" />
+          <Property Name="number" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="operatorgroupid" Type="uniqueidentifier" />
+          <Property Name="operatorid" Type="uniqueidentifier" />
+          <Property Name="originalplanexpenses" Type="money" Nullable="false" />
+          <Property Name="originalplantimetaken" Type="bigint" Nullable="false" />
+          <Property Name="changephase" Type="int" Nullable="false" />
+          <Property Name="plannedfinaldate" Type="datetime" />
+          <Property Name="plannedstartdate" Type="datetime" />
+          <Property Name="planningfixed" Type="int" Nullable="false" />
+          <Property Name="realizedexpenses" Type="money" Nullable="false" />
+          <Property Name="rejected" Type="bit" Nullable="false" />
+          <Property Name="rejecteddate" Type="datetime" />
+          <Property Name="rejectionreasonid" Type="uniqueidentifier" />
+          <Property Name="description" Type="ntext" />
+          <Property Name="resolved" Type="bit" Nullable="false" />
+          <Property Name="resolveddate" Type="datetime" />
+          <Property Name="skipped" Type="bit" Nullable="false" />
+          <Property Name="skippeddate" Type="datetime" />
+          <Property Name="skippedreasonid" Type="uniqueidentifier" />
+          <Property Name="started" Type="bit" Nullable="false" />
+          <Property Name="starteddate" Type="datetime" />
+          <Property Name="status" Type="int" Nullable="false" />
+          <Property Name="subcategoryid" Type="uniqueidentifier" />
+          <Property Name="timetaken" Type="bigint" Nullable="false" />
+          <Property Name="uidaanmk" Type="uniqueidentifier" />
+          <Property Name="uidwijzig" Type="uniqueidentifier" />
+          <Property Name="unid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="vrijedatum1" Type="datetime" />
+          <Property Name="vrijegetal1" Type="float" Nullable="false" />
+          <Property Name="vrijelogisch1" Type="bit" Nullable="false" />
+          <Property Name="vrijememo1" Type="ntext" />
+          <Property Name="vrijeopzoek1" Type="uniqueidentifier" />
+          <Property Name="vrijetekst1" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="vrijedatum2" Type="datetime" />
+          <Property Name="vrijegetal2" Type="float" Nullable="false" />
+          <Property Name="vrijelogisch2" Type="bit" Nullable="false" />
+          <Property Name="vrijememo2" Type="ntext" />
+          <Property Name="vrijeopzoek2" Type="uniqueidentifier" />
+          <Property Name="vrijetekst2" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="vrijedatum3" Type="datetime" />
+          <Property Name="vrijegetal3" Type="float" Nullable="false" />
+          <Property Name="vrijelogisch3" Type="bit" Nullable="false" />
+          <Property Name="vrijememo3" Type="ntext" />
+          <Property Name="vrijeopzoek3" Type="uniqueidentifier" />
+          <Property Name="vrijetekst3" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="vrijedatum4" Type="datetime" />
+          <Property Name="vrijegetal4" Type="float" Nullable="false" />
+          <Property Name="vrijelogisch4" Type="bit" Nullable="false" />
+          <Property Name="vrijememo4" Type="ntext" />
+          <Property Name="vrijeopzoek4" Type="uniqueidentifier" />
+          <Property Name="vrijetekst4" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="vrijedatum5" Type="datetime" />
+          <Property Name="vrijegetal5" Type="float" Nullable="false" />
+          <Property Name="vrijelogisch5" Type="bit" Nullable="false" />
+          <Property Name="vrijememo5" Type="ntext" />
+          <Property Name="vrijeopzoek5" Type="uniqueidentifier" />
+          <Property Name="vrijetekst5" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="attvrijedatum1" Type="datetime" />
+          <Property Name="attvrijegetal1" Type="float" Nullable="false" />
+          <Property Name="attvrijelogisch1" Type="bit" Nullable="false" />
+          <Property Name="attvrijememo1" Type="ntext" />
+          <Property Name="attvrijeopzoek1" Type="uniqueidentifier" />
+          <Property Name="attvrijetekst1" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="attvrijedatum2" Type="datetime" />
+          <Property Name="attvrijegetal2" Type="float" Nullable="false" />
+          <Property Name="attvrijelogisch2" Type="bit" Nullable="false" />
+          <Property Name="attvrijememo2" Type="ntext" />
+          <Property Name="attvrijeopzoek2" Type="uniqueidentifier" />
+          <Property Name="attvrijetekst2" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="attvrijedatum3" Type="datetime" />
+          <Property Name="attvrijegetal3" Type="float" Nullable="false" />
+          <Property Name="attvrijelogisch3" Type="bit" Nullable="false" />
+          <Property Name="attvrijememo3" Type="ntext" />
+          <Property Name="attvrijeopzoek3" Type="uniqueidentifier" />
+          <Property Name="attvrijetekst3" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="attvrijedatum4" Type="datetime" />
+          <Property Name="attvrijegetal4" Type="float" Nullable="false" />
+          <Property Name="attvrijelogisch4" Type="bit" Nullable="false" />
+          <Property Name="attvrijememo4" Type="ntext" />
+          <Property Name="attvrijeopzoek4" Type="uniqueidentifier" />
+          <Property Name="attvrijetekst4" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="attvrijedatum5" Type="datetime" />
+          <Property Name="attvrijegetal5" Type="float" Nullable="false" />
+          <Property Name="attvrijelogisch5" Type="bit" Nullable="false" />
+          <Property Name="attvrijememo5" Type="ntext" />
+          <Property Name="attvrijeopzoek5" Type="uniqueidentifier" />
+          <Property Name="attvrijetekst5" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="duration_in_workdays" Type="bigint" Nullable="false" />
+          <Property Name="duration_in_minutes" Type="bigint" Nullable="false" />
+          <Property Name="bespokememo" Type="ntext" />
+          <Property Name="activitystatusid" Type="uniqueidentifier" />
+          <Property Name="maystart" Type="bit" Nullable="false" />
+          <Property Name="importid" Type="nvarchar" MaxLength="450" Nullable="false" />
+          <Property Name="importdate" Type="datetime" />
+          <Property Name="monitored" Type="bit" Nullable="false" />
+          <Property Name="ref_operator_name" Type="nvarchar" MaxLength="109" Nullable="false" />
+          <Property Name="ref_change_brief_description" Type="nvarchar" MaxLength="80" Nullable="false" />
+          <Property Name="ref_change_number" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="appointmentid" Type="uniqueidentifier" />
+          <Property Name="displayincalendar" Type="bit" Nullable="false" />
+        </EntityType>
         <EntityType Name="incident">
           <Key>
             <PropertyRef Name="unid" />
@@ -358,6 +484,18 @@
           <Property Name="ref_servicelevelid" Type="uniqueidentifier" />
           <Property Name="supplierserviceid" Type="uniqueidentifier" />
         </EntityType>
+        <Association Name="fk_change_changeid_changeactivity">
+          <End Role="change" Type="Self.change" Multiplicity="1" />
+          <End Role="changeactivity" Type="Self.changeactivity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="change">
+              <PropertyRef Name="unid" />
+            </Principal>
+            <Dependent Role="changeactivity">
+              <PropertyRef Name="changeid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="fk_incident_incidentid_change">
           <End Role="incident" Type="Self.incident" Multiplicity="0..1" />
           <End Role="change" Type="Self.change" Multiplicity="*" />
@@ -396,7 +534,12 @@
         </Association>
         <EntityContainer Name="topdesk5ModelStoreContainer">
           <EntitySet Name="change" EntityType="Self.change" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="changeactivity" EntityType="Self.changeactivity" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="incident" EntityType="Self.incident" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="fk_change_changeid_changeactivity" Association="Self.fk_change_changeid_changeactivity">
+            <End Role="change" EntitySet="change" />
+            <End Role="changeactivity" EntitySet="changeactivity" />
+          </AssociationSet>
           <AssociationSet Name="fk_incident_incidentid_change" Association="Self.fk_incident_incidentid_change">
             <End Role="incident" EntitySet="incident" />
             <End Role="change" EntitySet="change" />
@@ -410,8 +553,7 @@
             <End Role="incident1" EntitySet="incident" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="topdesk5Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -594,6 +736,7 @@
           <Property Name="ref_operatorname" Type="String" MaxLength="109" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="appointmentid" Type="Guid" />
           <NavigationProperty Name="incident" Relationship="Self.fk_incident_incidentid_change" FromRole="change" ToRole="incident" />
+          <NavigationProperty Name="changeactivities" Relationship="topdesk5Model.fk_change_changeid_changeactivity" FromRole="change" ToRole="changeactivity" />
         </EntityType>
         <EntityType Name="incident">
           <Key>
@@ -825,7 +968,151 @@
             <End Role="incident" EntitySet="incidents" />
             <End Role="incident1" EntitySet="incidents" />
           </AssociationSet>
+          <EntitySet Name="changeactivities" EntityType="topdesk5Model.changeactivity" />
+          <AssociationSet Name="fk_change_changeid_changeactivity" Association="topdesk5Model.fk_change_changeid_changeactivity">
+            <End Role="change" EntitySet="changes" />
+            <End Role="changeactivity" EntitySet="changeactivities" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="changeactivity">
+          <Key>
+            <PropertyRef Name="unid" />
+          </Key>
+          <Property Name="action" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="activitytemplateid" Type="Guid" />
+          <Property Name="approved" Type="Boolean" Nullable="false" />
+          <Property Name="approveddate" Type="DateTime" Precision="3" />
+          <Property Name="archivereasonid" Type="Guid" />
+          <Property Name="briefdescription" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="categoryid" Type="Guid" />
+          <Property Name="changeid" Type="Guid" Nullable="false" />
+          <Property Name="comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="currentplanexpenses" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="currentplantimetaken" Type="Int64" Nullable="false" />
+          <Property Name="dataanmk" Type="DateTime" Precision="3" />
+          <Property Name="datwijzig" Type="DateTime" Precision="3" />
+          <Property Name="decidedby" Type="Int32" Nullable="false" />
+          <Property Name="decidedbypersonid" Type="Guid" />
+          <Property Name="expectedexpenses" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="expectedtimetaken" Type="Int64" Nullable="false" />
+          <Property Name="expenses" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="groupid" Type="Guid" />
+          <Property Name="importtype" Type="Int32" Nullable="false" />
+          <Property Name="milestoneid" Type="Guid" />
+          <Property Name="number" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="operatorgroupid" Type="Guid" />
+          <Property Name="operatorid" Type="Guid" />
+          <Property Name="originalplanexpenses" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="originalplantimetaken" Type="Int64" Nullable="false" />
+          <Property Name="changephase" Type="Int32" Nullable="false" />
+          <Property Name="plannedfinaldate" Type="DateTime" Precision="3" />
+          <Property Name="plannedstartdate" Type="DateTime" Precision="3" />
+          <Property Name="planningfixed" Type="Int32" Nullable="false" />
+          <Property Name="realizedexpenses" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="rejected" Type="Boolean" Nullable="false" />
+          <Property Name="rejecteddate" Type="DateTime" Precision="3" />
+          <Property Name="rejectionreasonid" Type="Guid" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="resolved" Type="Boolean" Nullable="false" />
+          <Property Name="resolveddate" Type="DateTime" Precision="3" />
+          <Property Name="skipped" Type="Boolean" Nullable="false" />
+          <Property Name="skippeddate" Type="DateTime" Precision="3" />
+          <Property Name="skippedreasonid" Type="Guid" />
+          <Property Name="started" Type="Boolean" Nullable="false" />
+          <Property Name="starteddate" Type="DateTime" Precision="3" />
+          <Property Name="status" Type="Int32" Nullable="false" />
+          <Property Name="subcategoryid" Type="Guid" />
+          <Property Name="timetaken" Type="Int64" Nullable="false" />
+          <Property Name="uidaanmk" Type="Guid" />
+          <Property Name="uidwijzig" Type="Guid" />
+          <Property Name="unid" Type="Guid" Nullable="false" />
+          <Property Name="vrijedatum1" Type="DateTime" Precision="3" />
+          <Property Name="vrijegetal1" Type="Double" Nullable="false" />
+          <Property Name="vrijelogisch1" Type="Boolean" Nullable="false" />
+          <Property Name="vrijememo1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="vrijeopzoek1" Type="Guid" />
+          <Property Name="vrijetekst1" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="vrijedatum2" Type="DateTime" Precision="3" />
+          <Property Name="vrijegetal2" Type="Double" Nullable="false" />
+          <Property Name="vrijelogisch2" Type="Boolean" Nullable="false" />
+          <Property Name="vrijememo2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="vrijeopzoek2" Type="Guid" />
+          <Property Name="vrijetekst2" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="vrijedatum3" Type="DateTime" Precision="3" />
+          <Property Name="vrijegetal3" Type="Double" Nullable="false" />
+          <Property Name="vrijelogisch3" Type="Boolean" Nullable="false" />
+          <Property Name="vrijememo3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="vrijeopzoek3" Type="Guid" />
+          <Property Name="vrijetekst3" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="vrijedatum4" Type="DateTime" Precision="3" />
+          <Property Name="vrijegetal4" Type="Double" Nullable="false" />
+          <Property Name="vrijelogisch4" Type="Boolean" Nullable="false" />
+          <Property Name="vrijememo4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="vrijeopzoek4" Type="Guid" />
+          <Property Name="vrijetekst4" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="vrijedatum5" Type="DateTime" Precision="3" />
+          <Property Name="vrijegetal5" Type="Double" Nullable="false" />
+          <Property Name="vrijelogisch5" Type="Boolean" Nullable="false" />
+          <Property Name="vrijememo5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="vrijeopzoek5" Type="Guid" />
+          <Property Name="vrijetekst5" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="attvrijedatum1" Type="DateTime" Precision="3" />
+          <Property Name="attvrijegetal1" Type="Double" Nullable="false" />
+          <Property Name="attvrijelogisch1" Type="Boolean" Nullable="false" />
+          <Property Name="attvrijememo1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="attvrijeopzoek1" Type="Guid" />
+          <Property Name="attvrijetekst1" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="attvrijedatum2" Type="DateTime" Precision="3" />
+          <Property Name="attvrijegetal2" Type="Double" Nullable="false" />
+          <Property Name="attvrijelogisch2" Type="Boolean" Nullable="false" />
+          <Property Name="attvrijememo2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="attvrijeopzoek2" Type="Guid" />
+          <Property Name="attvrijetekst2" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="attvrijedatum3" Type="DateTime" Precision="3" />
+          <Property Name="attvrijegetal3" Type="Double" Nullable="false" />
+          <Property Name="attvrijelogisch3" Type="Boolean" Nullable="false" />
+          <Property Name="attvrijememo3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="attvrijeopzoek3" Type="Guid" />
+          <Property Name="attvrijetekst3" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="attvrijedatum4" Type="DateTime" Precision="3" />
+          <Property Name="attvrijegetal4" Type="Double" Nullable="false" />
+          <Property Name="attvrijelogisch4" Type="Boolean" Nullable="false" />
+          <Property Name="attvrijememo4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="attvrijeopzoek4" Type="Guid" />
+          <Property Name="attvrijetekst4" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="attvrijedatum5" Type="DateTime" Precision="3" />
+          <Property Name="attvrijegetal5" Type="Double" Nullable="false" />
+          <Property Name="attvrijelogisch5" Type="Boolean" Nullable="false" />
+          <Property Name="attvrijememo5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="attvrijeopzoek5" Type="Guid" />
+          <Property Name="attvrijetekst5" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="duration_in_workdays" Type="Int64" Nullable="false" />
+          <Property Name="duration_in_minutes" Type="Int64" Nullable="false" />
+          <Property Name="bespokememo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="activitystatusid" Type="Guid" />
+          <Property Name="maystart" Type="Boolean" Nullable="false" />
+          <Property Name="importid" Type="String" Nullable="false" MaxLength="450" FixedLength="false" Unicode="true" />
+          <Property Name="importdate" Type="DateTime" Precision="3" />
+          <Property Name="monitored" Type="Boolean" Nullable="false" />
+          <Property Name="ref_operator_name" Type="String" Nullable="false" MaxLength="109" FixedLength="false" Unicode="true" />
+          <Property Name="ref_change_brief_description" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="ref_change_number" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="appointmentid" Type="Guid" />
+          <Property Name="displayincalendar" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="change" Relationship="topdesk5Model.fk_change_changeid_changeactivity" FromRole="changeactivity" ToRole="change" />
+        </EntityType>
+        <Association Name="fk_change_changeid_changeactivity">
+          <End Type="topdesk5Model.change" Role="change" Multiplicity="1" />
+          <End Type="topdesk5Model.changeactivity" Role="changeactivity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="change">
+              <PropertyRef Name="unid" />
+            </Principal>
+            <Dependent Role="changeactivity">
+              <PropertyRef Name="changeid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1184,6 +1471,133 @@
                 <ScalarProperty Name="adjusteddurationresolved" ColumnName="adjusteddurationresolved" />
                 <ScalarProperty Name="ref_servicelevelid" ColumnName="ref_servicelevelid" />
                 <ScalarProperty Name="supplierserviceid" ColumnName="supplierserviceid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="changeactivities">
+            <EntityTypeMapping TypeName="topdesk5Model.changeactivity">
+              <MappingFragment StoreEntitySet="changeactivity">
+                <ScalarProperty Name="displayincalendar" ColumnName="displayincalendar" />
+                <ScalarProperty Name="appointmentid" ColumnName="appointmentid" />
+                <ScalarProperty Name="ref_change_number" ColumnName="ref_change_number" />
+                <ScalarProperty Name="ref_change_brief_description" ColumnName="ref_change_brief_description" />
+                <ScalarProperty Name="ref_operator_name" ColumnName="ref_operator_name" />
+                <ScalarProperty Name="monitored" ColumnName="monitored" />
+                <ScalarProperty Name="importdate" ColumnName="importdate" />
+                <ScalarProperty Name="importid" ColumnName="importid" />
+                <ScalarProperty Name="maystart" ColumnName="maystart" />
+                <ScalarProperty Name="activitystatusid" ColumnName="activitystatusid" />
+                <ScalarProperty Name="bespokememo" ColumnName="bespokememo" />
+                <ScalarProperty Name="duration_in_minutes" ColumnName="duration_in_minutes" />
+                <ScalarProperty Name="duration_in_workdays" ColumnName="duration_in_workdays" />
+                <ScalarProperty Name="attvrijetekst5" ColumnName="attvrijetekst5" />
+                <ScalarProperty Name="attvrijeopzoek5" ColumnName="attvrijeopzoek5" />
+                <ScalarProperty Name="attvrijememo5" ColumnName="attvrijememo5" />
+                <ScalarProperty Name="attvrijelogisch5" ColumnName="attvrijelogisch5" />
+                <ScalarProperty Name="attvrijegetal5" ColumnName="attvrijegetal5" />
+                <ScalarProperty Name="attvrijedatum5" ColumnName="attvrijedatum5" />
+                <ScalarProperty Name="attvrijetekst4" ColumnName="attvrijetekst4" />
+                <ScalarProperty Name="attvrijeopzoek4" ColumnName="attvrijeopzoek4" />
+                <ScalarProperty Name="attvrijememo4" ColumnName="attvrijememo4" />
+                <ScalarProperty Name="attvrijelogisch4" ColumnName="attvrijelogisch4" />
+                <ScalarProperty Name="attvrijegetal4" ColumnName="attvrijegetal4" />
+                <ScalarProperty Name="attvrijedatum4" ColumnName="attvrijedatum4" />
+                <ScalarProperty Name="attvrijetekst3" ColumnName="attvrijetekst3" />
+                <ScalarProperty Name="attvrijeopzoek3" ColumnName="attvrijeopzoek3" />
+                <ScalarProperty Name="attvrijememo3" ColumnName="attvrijememo3" />
+                <ScalarProperty Name="attvrijelogisch3" ColumnName="attvrijelogisch3" />
+                <ScalarProperty Name="attvrijegetal3" ColumnName="attvrijegetal3" />
+                <ScalarProperty Name="attvrijedatum3" ColumnName="attvrijedatum3" />
+                <ScalarProperty Name="attvrijetekst2" ColumnName="attvrijetekst2" />
+                <ScalarProperty Name="attvrijeopzoek2" ColumnName="attvrijeopzoek2" />
+                <ScalarProperty Name="attvrijememo2" ColumnName="attvrijememo2" />
+                <ScalarProperty Name="attvrijelogisch2" ColumnName="attvrijelogisch2" />
+                <ScalarProperty Name="attvrijegetal2" ColumnName="attvrijegetal2" />
+                <ScalarProperty Name="attvrijedatum2" ColumnName="attvrijedatum2" />
+                <ScalarProperty Name="attvrijetekst1" ColumnName="attvrijetekst1" />
+                <ScalarProperty Name="attvrijeopzoek1" ColumnName="attvrijeopzoek1" />
+                <ScalarProperty Name="attvrijememo1" ColumnName="attvrijememo1" />
+                <ScalarProperty Name="attvrijelogisch1" ColumnName="attvrijelogisch1" />
+                <ScalarProperty Name="attvrijegetal1" ColumnName="attvrijegetal1" />
+                <ScalarProperty Name="attvrijedatum1" ColumnName="attvrijedatum1" />
+                <ScalarProperty Name="vrijetekst5" ColumnName="vrijetekst5" />
+                <ScalarProperty Name="vrijeopzoek5" ColumnName="vrijeopzoek5" />
+                <ScalarProperty Name="vrijememo5" ColumnName="vrijememo5" />
+                <ScalarProperty Name="vrijelogisch5" ColumnName="vrijelogisch5" />
+                <ScalarProperty Name="vrijegetal5" ColumnName="vrijegetal5" />
+                <ScalarProperty Name="vrijedatum5" ColumnName="vrijedatum5" />
+                <ScalarProperty Name="vrijetekst4" ColumnName="vrijetekst4" />
+                <ScalarProperty Name="vrijeopzoek4" ColumnName="vrijeopzoek4" />
+                <ScalarProperty Name="vrijememo4" ColumnName="vrijememo4" />
+                <ScalarProperty Name="vrijelogisch4" ColumnName="vrijelogisch4" />
+                <ScalarProperty Name="vrijegetal4" ColumnName="vrijegetal4" />
+                <ScalarProperty Name="vrijedatum4" ColumnName="vrijedatum4" />
+                <ScalarProperty Name="vrijetekst3" ColumnName="vrijetekst3" />
+                <ScalarProperty Name="vrijeopzoek3" ColumnName="vrijeopzoek3" />
+                <ScalarProperty Name="vrijememo3" ColumnName="vrijememo3" />
+                <ScalarProperty Name="vrijelogisch3" ColumnName="vrijelogisch3" />
+                <ScalarProperty Name="vrijegetal3" ColumnName="vrijegetal3" />
+                <ScalarProperty Name="vrijedatum3" ColumnName="vrijedatum3" />
+                <ScalarProperty Name="vrijetekst2" ColumnName="vrijetekst2" />
+                <ScalarProperty Name="vrijeopzoek2" ColumnName="vrijeopzoek2" />
+                <ScalarProperty Name="vrijememo2" ColumnName="vrijememo2" />
+                <ScalarProperty Name="vrijelogisch2" ColumnName="vrijelogisch2" />
+                <ScalarProperty Name="vrijegetal2" ColumnName="vrijegetal2" />
+                <ScalarProperty Name="vrijedatum2" ColumnName="vrijedatum2" />
+                <ScalarProperty Name="vrijetekst1" ColumnName="vrijetekst1" />
+                <ScalarProperty Name="vrijeopzoek1" ColumnName="vrijeopzoek1" />
+                <ScalarProperty Name="vrijememo1" ColumnName="vrijememo1" />
+                <ScalarProperty Name="vrijelogisch1" ColumnName="vrijelogisch1" />
+                <ScalarProperty Name="vrijegetal1" ColumnName="vrijegetal1" />
+                <ScalarProperty Name="vrijedatum1" ColumnName="vrijedatum1" />
+                <ScalarProperty Name="unid" ColumnName="unid" />
+                <ScalarProperty Name="uidwijzig" ColumnName="uidwijzig" />
+                <ScalarProperty Name="uidaanmk" ColumnName="uidaanmk" />
+                <ScalarProperty Name="timetaken" ColumnName="timetaken" />
+                <ScalarProperty Name="subcategoryid" ColumnName="subcategoryid" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="starteddate" ColumnName="starteddate" />
+                <ScalarProperty Name="started" ColumnName="started" />
+                <ScalarProperty Name="skippedreasonid" ColumnName="skippedreasonid" />
+                <ScalarProperty Name="skippeddate" ColumnName="skippeddate" />
+                <ScalarProperty Name="skipped" ColumnName="skipped" />
+                <ScalarProperty Name="resolveddate" ColumnName="resolveddate" />
+                <ScalarProperty Name="resolved" ColumnName="resolved" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="rejectionreasonid" ColumnName="rejectionreasonid" />
+                <ScalarProperty Name="rejecteddate" ColumnName="rejecteddate" />
+                <ScalarProperty Name="rejected" ColumnName="rejected" />
+                <ScalarProperty Name="realizedexpenses" ColumnName="realizedexpenses" />
+                <ScalarProperty Name="planningfixed" ColumnName="planningfixed" />
+                <ScalarProperty Name="plannedstartdate" ColumnName="plannedstartdate" />
+                <ScalarProperty Name="plannedfinaldate" ColumnName="plannedfinaldate" />
+                <ScalarProperty Name="changephase" ColumnName="changephase" />
+                <ScalarProperty Name="originalplantimetaken" ColumnName="originalplantimetaken" />
+                <ScalarProperty Name="originalplanexpenses" ColumnName="originalplanexpenses" />
+                <ScalarProperty Name="operatorid" ColumnName="operatorid" />
+                <ScalarProperty Name="operatorgroupid" ColumnName="operatorgroupid" />
+                <ScalarProperty Name="number" ColumnName="number" />
+                <ScalarProperty Name="milestoneid" ColumnName="milestoneid" />
+                <ScalarProperty Name="importtype" ColumnName="importtype" />
+                <ScalarProperty Name="groupid" ColumnName="groupid" />
+                <ScalarProperty Name="expenses" ColumnName="expenses" />
+                <ScalarProperty Name="expectedtimetaken" ColumnName="expectedtimetaken" />
+                <ScalarProperty Name="expectedexpenses" ColumnName="expectedexpenses" />
+                <ScalarProperty Name="decidedbypersonid" ColumnName="decidedbypersonid" />
+                <ScalarProperty Name="decidedby" ColumnName="decidedby" />
+                <ScalarProperty Name="datwijzig" ColumnName="datwijzig" />
+                <ScalarProperty Name="dataanmk" ColumnName="dataanmk" />
+                <ScalarProperty Name="currentplantimetaken" ColumnName="currentplantimetaken" />
+                <ScalarProperty Name="currentplanexpenses" ColumnName="currentplanexpenses" />
+                <ScalarProperty Name="comments" ColumnName="comments" />
+                <ScalarProperty Name="changeid" ColumnName="changeid" />
+                <ScalarProperty Name="categoryid" ColumnName="categoryid" />
+                <ScalarProperty Name="briefdescription" ColumnName="briefdescription" />
+                <ScalarProperty Name="archivereasonid" ColumnName="archivereasonid" />
+                <ScalarProperty Name="approveddate" ColumnName="approveddate" />
+                <ScalarProperty Name="approved" ColumnName="approved" />
+                <ScalarProperty Name="activitytemplateid" ColumnName="activitytemplateid" />
+                <ScalarProperty Name="action" ColumnName="action" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

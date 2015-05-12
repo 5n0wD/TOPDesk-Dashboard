@@ -12,96 +12,56 @@ namespace Topdesk_Dashboard
     using System;
     using System.Collections.Generic;
     
-    public partial class change
+    public partial class changeactivity
     {
-        public change()
-        {
-            this.changeactivities = new HashSet<changeactivity>();
-        }
-    
-        public Nullable<System.Guid> aanmelderafdelingid { get; set; }
-        public Nullable<System.Guid> aanmelderbudgethouderid { get; set; }
-        public string aanmelderemail { get; set; }
-        public Nullable<System.Guid> aanmelderlokatieid { get; set; }
-        public string aanmeldernaam { get; set; }
-        public string aanmeldertelefoon { get; set; }
-        public Nullable<System.Guid> aanmeldervestigingid { get; set; }
         public string action { get; set; }
+        public Nullable<System.Guid> activitytemplateid { get; set; }
+        public bool approved { get; set; }
+        public Nullable<System.DateTime> approveddate { get; set; }
         public Nullable<System.Guid> archivereasonid { get; set; }
-        public Nullable<System.Guid> benefitid { get; set; }
-        public Nullable<System.Guid> branchid { get; set; }
         public string briefdescription { get; set; }
-        public int calc_type_authdate { get; set; }
-        public int calc_type_finaldate { get; set; }
-        public int calc_type_impldate { get; set; }
-        public Nullable<System.DateTime> calldate { get; set; }
         public Nullable<System.Guid> categoryid { get; set; }
+        public System.Guid changeid { get; set; }
+        public string comments { get; set; }
         public decimal currentplanexpenses { get; set; }
         public long currentplantimetaken { get; set; }
-        public int changetype { get; set; }
-        public bool closed { get; set; }
-        public Nullable<System.DateTime> closeddate { get; set; }
-        public string comments { get; set; }
-        public bool completed { get; set; }
-        public Nullable<System.DateTime> completeddate { get; set; }
-        public int currentphase { get; set; }
         public Nullable<System.DateTime> dataanmk { get; set; }
         public Nullable<System.DateTime> datwijzig { get; set; }
-        public string description { get; set; }
-        public decimal estimateexpenses { get; set; }
-        public long estimatetimetaken { get; set; }
-        public Nullable<System.DateTime> finaldate { get; set; }
-        public Nullable<System.Guid> eval_authoperatorid { get; set; }
-        public Nullable<System.Guid> eval_authpersonid { get; set; }
+        public int decidedby { get; set; }
+        public Nullable<System.Guid> decidedbypersonid { get; set; }
+        public decimal expectedexpenses { get; set; }
+        public long expectedtimetaken { get; set; }
         public decimal expenses { get; set; }
-        public string externalnumber { get; set; }
-        public Nullable<System.Guid> extraaid { get; set; }
-        public Nullable<System.Guid> extraapersoonid { get; set; }
-        public Nullable<System.Guid> extrabid { get; set; }
-        public Nullable<System.Guid> extrabpersoonid { get; set; }
-        public Nullable<System.Guid> impactid { get; set; }
+        public Nullable<System.Guid> groupid { get; set; }
         public int importtype { get; set; }
-        public Nullable<System.Guid> incidentid { get; set; }
-        public bool isurgent { get; set; }
-        public Nullable<System.Guid> locationid { get; set; }
-        public Nullable<System.Guid> managerid { get; set; }
         public Nullable<System.Guid> milestoneid { get; set; }
         public string number { get; set; }
-        public Nullable<System.Guid> objectid { get; set; }
         public Nullable<System.Guid> operatorgroupid { get; set; }
         public Nullable<System.Guid> operatorid { get; set; }
         public decimal originalplanexpenses { get; set; }
         public long originalplantimetaken { get; set; }
-        public Nullable<System.Guid> persoonid { get; set; }
-        public Nullable<System.DateTime> plannedauthdate { get; set; }
+        public int changephase { get; set; }
         public Nullable<System.DateTime> plannedfinaldate { get; set; }
-        public Nullable<System.DateTime> plannedimpldate { get; set; }
-        public Nullable<System.DateTime> implementationdate { get; set; }
-        public Nullable<System.Guid> pro_authoperatorid { get; set; }
-        public Nullable<System.Guid> pro_authpersonid { get; set; }
+        public Nullable<System.DateTime> plannedstartdate { get; set; }
+        public int planningfixed { get; set; }
+        public decimal realizedexpenses { get; set; }
+        public bool rejected { get; set; }
         public Nullable<System.DateTime> rejecteddate { get; set; }
         public Nullable<System.Guid> rejectionreasonid { get; set; }
-        public Nullable<System.DateTime> authorizationdate { get; set; }
-        public Nullable<System.Guid> req_authoperatorid { get; set; }
-        public Nullable<System.Guid> req_authpersonid { get; set; }
+        public string description { get; set; }
+        public bool resolved { get; set; }
+        public Nullable<System.DateTime> resolveddate { get; set; }
+        public bool skipped { get; set; }
+        public Nullable<System.DateTime> skippeddate { get; set; }
+        public Nullable<System.Guid> skippedreasonid { get; set; }
         public bool started { get; set; }
         public Nullable<System.DateTime> starteddate { get; set; }
         public int status { get; set; }
-        public Nullable<System.Guid> statusid { get; set; }
         public Nullable<System.Guid> subcategoryid { get; set; }
-        public Nullable<System.DateTime> submitdate { get; set; }
-        public decimal sum_realizedexpenses { get; set; }
-        public long sum_realizedtime { get; set; }
-        public decimal sum_remainingexpenses { get; set; }
-        public long sum_remainingtime { get; set; }
-        public Nullable<System.Guid> templateid { get; set; }
         public long timetaken { get; set; }
-        public Nullable<System.Guid> typeid { get; set; }
         public Nullable<System.Guid> uidaanmk { get; set; }
         public Nullable<System.Guid> uidwijzig { get; set; }
         public System.Guid unid { get; set; }
-        public Nullable<System.Guid> versionid { get; set; }
-        public bool withevaluation { get; set; }
         public Nullable<System.DateTime> vrijedatum1 { get; set; }
         public double vrijegetal1 { get; set; }
         public bool vrijelogisch1 { get; set; }
@@ -162,39 +122,20 @@ namespace Topdesk_Dashboard
         public string attvrijememo5 { get; set; }
         public Nullable<System.Guid> attvrijeopzoek5 { get; set; }
         public string attvrijetekst5 { get; set; }
-        public int eval_decidedby { get; set; }
-        public int pro_decidedby { get; set; }
-        public Nullable<System.DateTime> plannedstartdate { get; set; }
-        public int rejectedby { get; set; }
-        public int canceledby { get; set; }
-        public Nullable<System.Guid> canceledbypersonid { get; set; }
-        public Nullable<System.Guid> canceledbyoperatorid { get; set; }
-        public Nullable<System.Guid> cancelreasonid { get; set; }
-        public Nullable<System.DateTime> canceldate { get; set; }
-        public Nullable<System.Guid> priorityid { get; set; }
-        public bool rejected { get; set; }
-        public Nullable<System.DateTime> pro_rejecteddate { get; set; }
+        public long duration_in_workdays { get; set; }
+        public long duration_in_minutes { get; set; }
         public string bespokememo { get; set; }
-        public bool mayauthorize_rfc { get; set; }
-        public bool mayauthorize_pro { get; set; }
-        public bool mayauthorize_eval { get; set; }
+        public Nullable<System.Guid> activitystatusid { get; set; }
+        public bool maystart { get; set; }
         public string importid { get; set; }
         public Nullable<System.DateTime> importdate { get; set; }
-        public int publish_type { get; set; }
-        public int publish_description_type { get; set; }
-        public string publish_title { get; set; }
-        public string publish_description { get; set; }
-        public bool savedinsecure { get; set; }
-        public string ref_type_name { get; set; }
-        public string ref_category_name { get; set; }
-        public string ref_subcategory_name { get; set; }
-        public string ref_req_authoperator_name { get; set; }
-        public string ref_pro_authoperator_name { get; set; }
-        public string ref_eval_authoperator_name { get; set; }
-        public string ref_operatorname { get; set; }
+        public bool monitored { get; set; }
+        public string ref_operator_name { get; set; }
+        public string ref_change_brief_description { get; set; }
+        public string ref_change_number { get; set; }
         public Nullable<System.Guid> appointmentid { get; set; }
+        public bool displayincalendar { get; set; }
     
-        public virtual incident incident { get; set; }
-        public virtual ICollection<changeactivity> changeactivities { get; set; }
+        public virtual change change { get; set; }
     }
 }

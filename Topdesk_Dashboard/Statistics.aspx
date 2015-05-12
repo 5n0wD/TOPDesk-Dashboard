@@ -74,7 +74,7 @@
                             <asp:TextBox runat="server" ID="txtCountWijzig" Width="40" ReadOnly="True"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell>
-                            <asp:Label runat="server" ID="lblAantalActiviteiten" Text="Aantal activiteiten deze week:"></asp:Label>
+                            <asp:Label runat="server" ID="lblAantalActiviteiten" Text="Totaal aantal activiteiten:"></asp:Label>
                         </asp:TableCell>
                         <asp:TableCell>
                             <asp:TextBox runat="server" ID="txtAantalActiviteiten" Width="40" ReadOnly="True"></asp:TextBox>
@@ -96,13 +96,13 @@
                     </asp:TableRow>
                     <asp:TableRow>
                         <asp:TableCell>
-                            <asp:Label runat="server" ID="Label5" Text="aantal te realiseren:"></asp:Label>
+                            <asp:Label runat="server" ID="lblCntToRealize" Text="aantal te realiseren:"></asp:Label>
                         </asp:TableCell>
                         <asp:TableCell>
                             <asp:TextBox runat="server" ID="txtCntToRealize" Width="40" ReadOnly="true"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell>
-                            <asp:Label runat="server" ID="Label6" Text="Te Evalueren:"></asp:Label>
+                            <asp:Label runat="server" ID="lblEval" Text="Te Evalueren:"></asp:Label>
                         </asp:TableCell>
                         <asp:TableCell>
                             <asp:TextBox runat="server" ID="txtEval" Width="40" ReadOnly="true"></asp:TextBox>
