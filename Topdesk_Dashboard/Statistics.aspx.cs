@@ -97,7 +97,7 @@ namespace Topdesk_Dashboard
                                    select cntAct.number).Count();
             txtAantalActiviteiten.Text = countActivities.ToString();
 
-            
+            //var authNonImpl = (from cntauthNonImp in TopDeskModel.changes)
 
             #endregion
 
