@@ -40,6 +40,7 @@ namespace Topdesk_Dashboard
             #endregion
 
             #region Statistieken van Incidenten en Wijzigingen
+            //incidenten
             var countTotal = (from cntTotal in TopDeskModel.incidents
                               where cntTotal.dataanmk > beginVorigJaar && cntTotal.afgemeld == false && cntTotal.status != -1
                               select cntTotal.naam).Count();
@@ -71,7 +72,7 @@ namespace Topdesk_Dashboard
                                   (cntYester.afgemeld == false)
                                   select cntYester.naam).Count();
             txtTotalYesterday.Text = countYesterday.ToString();
-
+            // changes
             var countWijzigTotal = (from cntwijzTotal in TopDeskModel.changes
                                     where cntwijzTotal.plannedfinaldate >= gisteren
                                     select cntwijzTotal.number).Count();
