@@ -25,6 +25,7 @@ namespace Topdesk_Dashboard
             DateTime beginVorigJaar = new DateTime(2014, 1, 1); //begin vorig jaar aangegeven als jaar,maand,dag
             DateTime tienTerugDatum = DateTime.Today.AddDays(-10); //10 dagen terug
             DateTime tienVerderDatum = DateTime.Today.AddDays(10);
+            DateTime jaarTerug = DateTime.Today.AddMonths(-15);
 
             topdesk5Entities TopDeskModel = new topdesk5Entities();
             #endregion
@@ -72,9 +73,10 @@ namespace Topdesk_Dashboard
                                   (cntYester.afgemeld == false)
                                   select cntYester.naam).Count();
             txtTotalYesterday.Text = countYesterday.ToString();
-            // changes
+
+            //changes
             var countWijzigTotal = (from cntwijzTotal in TopDeskModel.changes
-                                    where cntwijzTotal.plannedfinaldate >= gisteren
+                                    where cntwijzTotal.canceldate == null && cntwijzTotal.rejected == false && cntwijzTotal.implementationdate == null && cntwijzTotal.authorizationdate != null && cntwijzTotal.plannedfinaldate >= jaarTerug
                                     select cntwijzTotal.number).Count();
             txtCountWijzig.Text = countWijzigTotal.ToString();
 
@@ -93,12 +95,19 @@ namespace Topdesk_Dashboard
                                       select cntCmngChanges.number).Count();
             txtCntToRealize.Text = countComingChanges.ToString();
 
-            var countActivities = (from cntAct in TopDeskModel.changeactivities
-                                   where cntAct.plannedfinaldate >= vandaag && cntAct.rejected == false && cntAct.resolved == false //
-                                   select cntAct.number).Count();
-            txtAantalActiviteiten.Text = countActivities.ToString();
+            var countActWijzigTotal = (from cntActWijzTotal in TopDeskModel.changeactivities
+                                       join cntWijzTotal in TopDeskModel.changes
+                                           on cntActWijzTotal.ref_change_number equals cntWijzTotal.number
+                                       where cntWijzTotal.rejected == false && cntWijzTotal.completed == false && cntActWijzTotal.maystart == true && cntActWijzTotal.resolved == false && cntActWijzTotal.skipped == false && cntActWijzTotal.rejected == false && cntActWijzTotal.plannedfinaldate >= jaarTerug
+                                       select cntActWijzTotal.number).Count();
+            txtAantalActiviteiten.Text = countActWijzigTotal.ToString();
 
-            //var authNonImpl = (from cntauthNonImp in TopDeskModel.changes)
+            var authNonImpl = (from cntAuthNonImp in TopDeskModel.changes
+                               join cntAuthWijzAc in TopDeskModel.changeactivities
+                                   on cntAuthNonImp.number equals cntAuthWijzAc.ref_change_number
+                               where cntAuthNonImp.authorizationdate != null && cntAuthNonImp.implementationdate == null && cntAuthWijzAc.resolved == false
+                               select cntAuthNonImp.number).Count();
+            txtAuthorisedNonImpl.Text = authNonImpl.ToString();
 
             #endregion
 

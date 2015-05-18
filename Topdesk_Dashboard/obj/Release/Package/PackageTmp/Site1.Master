@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Topdesk_Dashboard.Site1" %>
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="StyleSheet.css" type="text/css" />
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <title></title>
+    <asp:ContentPlaceHolder ID="Stylesheets" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <%--Menu --%>
+            <asp:Menu ID="Menu1" StaticSubMenuIndent="10px" CssClass="MenuCssClass" DynamicHorizontalOffset="2" Font-Names="Arial" Font-Size="0.8em" Orientation="Horizontal" runat="server">
+                <Items>
+                    <asp:MenuItem Text="Statistieken" Value="Statistieken" NavigateUrl="~/Statistics.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Incidenten" Value="Dashboard" NavigateUrl="~/Dashboard.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Wijzigingen" Value="Wijzigingen" NavigateUrl="~/Change.aspx"></asp:MenuItem>
+                    <%-- exta menu items hier --%>
+                </Items>
+            </asp:Menu>
+            <%--Menu --%>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <div id="DivContent1">
+                </div>
+
+                <%--Tab "menu"--%>
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                <div id="DivContent2">
+                </div>
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                <div id="DivContent3">
+                </div>
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+                <div id="DivContent4">
+                </div>
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder5" runat="server">
+                <div id="DivContent5">
+                </div>
+            </asp:ContentPlaceHolder>
+
+        </div>
+    </form>
+</body>
+</html>

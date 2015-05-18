@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="092b3b2249cc4568ab7f8b8fbb144f3a" Name="Diagram1" ZoomLevel="107">
+        <EntityTypeShape EntityType="topdesk5Model.change" Width="1.5" PointX="2.125" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="topdesk5Model.incident" Width="1.5" PointX="0.5" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="topdesk5Model.fk_incident_incidentid_change" ManuallyRouted="false" >
+        </AssociationConnector>
+        <AssociationConnector Association="topdesk5Model.fk_incident_incidentid_incident" ManuallyRouted="false" />
+        <AssociationConnector Association="topdesk5Model.fk_incident_majorincidentid_incident" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="topdesk5Model.changeactivity" Width="1.5" PointX="3.75" PointY="1.375" />
+        <AssociationConnector Association="topdesk5Model.fk_change_changeid_changeactivity" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
