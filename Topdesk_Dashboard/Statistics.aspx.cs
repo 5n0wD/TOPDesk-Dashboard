@@ -18,7 +18,7 @@ namespace Topdesk_Dashboard
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            #region Datetime settings + instantie
+            #region Datetime settings + instantie van het model
             DateTime vandaag = DateTime.Today;//vandaag
             DateTime gisteren = DateTime.Today.AddDays(-1).Date; //gisteren
             DateTime eindGisteren = DateTime.Today.Date.AddSeconds(-1); //laatste seconde van gisteren
@@ -36,7 +36,7 @@ namespace Topdesk_Dashboard
              * je begint bijna altijd met var omdat het vaak onduidelijk is wat voor soort return type je krijgt(int, string, float, maar ook list en arrays)
              * inplaats van select begin je met from waar je een alias voor je model kiest
              * vervolgens kun je de gebruikelijke SQL statements gebruiken o.a. Where,Join,Order by,Group by
-             * en je eindigt met de select
+             * en je eindigt met de select.
              */
             #endregion
 
