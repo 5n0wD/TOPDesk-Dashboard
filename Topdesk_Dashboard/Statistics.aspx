@@ -20,13 +20,13 @@
                 <asp:Table ID="IncidentenTable" runat="server">
                     <asp:TableRow>
                         <asp:TableCell>
-                            <asp:Label runat="server" ID="lblAllReports" Text="Totaal aantal incidenten:"></asp:Label>
+                            <asp:Label runat="server" CssClass="divText" ID="lblAllReports" Text="Totaal aantal incidenten:"></asp:Label>
                         </asp:TableCell>
                         <asp:TableCell>
                             <asp:TextBox runat="server" ID="txtTotalAmount" Width="40" ReadOnly="True"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell>
-                            <asp:Label runat="server" ID="lblNoTargetDate" Text="Aantal zonder streefdatum:"></asp:Label>
+                            <asp:Label runat="server" CssClass="divText" ID="lblNoTargetDate" Text="Aantal zonder streefdatum:"></asp:Label>
                         </asp:TableCell>
                         <asp:TableCell>
                             <asp:TextBox runat="server" ID="txtNoTargetDate" Width="40" ReadOnly="True"></asp:TextBox>
@@ -34,13 +34,13 @@
                     </asp:TableRow>
                     <asp:TableRow>
                         <asp:TableCell>
-                            <asp:Label runat="server" ID="lblTotalExceeded" Text="Aantal overschreden:"></asp:Label>
+                            <asp:Label runat="server" CssClass="divText" ID="lblTotalExceeded" Text="Aantal overschreden:"></asp:Label>
                         </asp:TableCell>
                         <asp:TableCell>
                             <asp:TextBox runat="server" ID="txtTotalExceeded" Width="40" ReadOnly="True"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell>
-                            <asp:Label runat="server" ID="lblTotalToday" Text="Totaal vandaag:"></asp:Label>
+                            <asp:Label runat="server" CssClass="divText" ID="lblTotalToday" Text="Totaal vandaag:"></asp:Label>
                         </asp:TableCell>
                         <asp:TableCell>
                             <asp:TextBox runat="server" ID="txtTotalToday" Width="40" ReadOnly="True"></asp:TextBox>
@@ -48,13 +48,13 @@
                     </asp:TableRow>
                     <asp:TableRow>
                         <asp:TableCell>
-                            <asp:Label runat="server" ID="lblStillToCome" Text="Te realiseren"></asp:Label>
+                            <asp:Label runat="server" CssClass="divText" ID="lblStillToCome" Text="Te realiseren"></asp:Label>
                         </asp:TableCell>
                         <asp:TableCell>
                             <asp:TextBox runat="server" ID="txtStillToCome" Width="40" ReadOnly="true"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell>
-                            <asp:Label runat="server" ID="lblTotalYesterday" Text="Totaal Gisteren:"></asp:Label>
+                            <asp:Label runat="server" CssClass="divText" ID="lblTotalYesterday" Text="Totaal Gisteren:"></asp:Label>
                         </asp:TableCell>
                         <asp:TableCell>
                             <asp:TextBox runat="server" ID="txtTotalYesterday" Width="40" ReadOnly="true"></asp:TextBox>
@@ -68,13 +68,13 @@
                 <asp:Table ID="WijzigingenTable" runat="server">
                     <asp:TableRow>
                         <asp:TableCell>
-                            <asp:Label runat="server" ID="lblCountWijzig" Text="Totaal aantal wijzigingen:"></asp:Label>
+                            <asp:Label runat="server" CssClass="divText" ID="lblCountWijzig" Text="Totaal aantal wijzigingen:"></asp:Label>
                         </asp:TableCell>
                         <asp:TableCell>
                             <asp:TextBox runat="server" ID="txtCountWijzig" Width="40" ReadOnly="True"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell>
-                            <asp:Label runat="server" ID="lblAantalActiviteiten" Text="Totaal aantal activiteiten:"></asp:Label>
+                            <asp:Label runat="server" CssClass="divText" ID="lblAantalActiviteiten" Text="Totaal aantal activiteiten:"></asp:Label>
                         </asp:TableCell>
                         <asp:TableCell>
                             <asp:TextBox runat="server" ID="txtAantalActiviteiten" Width="40" ReadOnly="True"></asp:TextBox>

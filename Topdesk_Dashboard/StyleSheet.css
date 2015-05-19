@@ -108,6 +108,10 @@ body {
     background-color: darkblue;
 }
 
+.divText {
+    color: white;
+}
+
 #WijzigingenDiv {
     float: right;
     background-color: darkblue;
