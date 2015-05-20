@@ -2,7 +2,7 @@
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 
-<%-- V1.1 --%>
+<%-- V1.3 --%>
 <%@ Register Assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI.DataVisualization.Charting" TagPrefix="asp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Stylesheets" runat="server">
     <script src="ScriptFile.js" type="text/javascript"></script>
@@ -82,13 +82,13 @@
                     </asp:TableRow>
                     <asp:TableRow>
                         <asp:TableCell>
-                            <asp:Label runat="server" ID="LblAantlWijzigingsAanvrg" Text="Aantal wijzigingsaanvragen:"></asp:Label>
+                            <asp:Label runat="server" CssClass="divText" ID="LblAantlWijzigingsAanvrg" Text="Aantal wijzigingsaanvragen:"></asp:Label>
                         </asp:TableCell>
                         <asp:TableCell>
                             <asp:TextBox runat="server" ID="txtAantalWijzigAanvrg" Width="40" ReadOnly="True"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell>
-                            <asp:Label runat="server" ID="lblAuthorisedNonImplemented" Text="Geautoriseerd niet geimplementeerd:"></asp:Label>
+                            <asp:Label runat="server" CssClass="divText" ID="lblAuthorisedNonImplemented" Text="Geautoriseerd niet geimplementeerd:"></asp:Label>
                         </asp:TableCell>
                         <asp:TableCell>
                             <asp:TextBox runat="server" ID="txtAuthorisedNonImpl" Width="40" ReadOnly="True"></asp:TextBox>
@@ -96,13 +96,13 @@
                     </asp:TableRow>
                     <asp:TableRow>
                         <asp:TableCell>
-                            <asp:Label runat="server" ID="lblCntToRealize" Text="aantal te realiseren:"></asp:Label>
+                            <asp:Label runat="server" CssClass="divText" ID="lblCntToRealize" Text="aantal te realiseren:"></asp:Label>
                         </asp:TableCell>
                         <asp:TableCell>
                             <asp:TextBox runat="server" ID="txtCntToRealize" Width="40" ReadOnly="true"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell>
-                            <asp:Label runat="server" ID="lblEval" Text="Te Evalueren:"></asp:Label>
+                            <asp:Label runat="server" CssClass="divText" ID="lblEval" Text="Te Evalueren:"></asp:Label>
                         </asp:TableCell>
                         <asp:TableCell>
                             <asp:TextBox runat="server" ID="txtEval" Width="40" ReadOnly="true"></asp:TextBox>

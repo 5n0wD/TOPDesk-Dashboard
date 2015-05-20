@@ -104,7 +104,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="Dashboard.aspx" />
+    <Content Include="Incident.aspx" />
     <Content Include="IncidentInfo.aspx" />
     <Content Include="Statistics.aspx" />
     <Content Include="StyleSheet.css" />
@@ -133,12 +133,12 @@
     </Compile>
     <Compile Include="CounterClass.cs" />
     <Compile Include="CountListClass.cs" />
-    <Compile Include="Dashboard.aspx.cs">
-      <DependentUpon>Dashboard.aspx</DependentUpon>
+    <Compile Include="Incident.aspx.cs">
+      <DependentUpon>Incident.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Dashboard.aspx.designer.cs">
-      <DependentUpon>Dashboard.aspx</DependentUpon>
+    <Compile Include="Incident.aspx.designer.cs">
+      <DependentUpon>Incident.aspx</DependentUpon>
     </Compile>
     <Compile Include="incident.cs">
       <DependentUpon>Model1.tt</DependentUpon>

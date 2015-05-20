@@ -1,4 +1,5 @@
-﻿/*rest stuff*/
+﻿/*V1.3*/
+/*rest stuff*/
 body {
     font-family: Arial,sans-serif,Tahoma,Verdana,"Trebuchet MS";
     background-color: black;
@@ -112,6 +113,7 @@ body {
     color: white;
 }
 
+
 #WijzigingenDiv {
     float: right;
     background-color: darkblue;
@@ -193,8 +195,15 @@ body {
 
 .lblCssClass {
     background-color: black;
+    color: white;
+}
+
+.lblPlaceholder {
+    background-color: black;
+    color: white;
 }
 
 .MenuCssClass {
-    background-color: gray;
+    background-color: black;
+    color: white;
 }
