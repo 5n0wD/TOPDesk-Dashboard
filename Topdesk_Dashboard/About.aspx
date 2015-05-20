@@ -9,6 +9,9 @@
             <p id="Paragraph">
                 Deze website is gebouwd om een overzicht te bieden voor de ICT afdeling van Plegt-Vos.
             </p>
+            <p>
+
+            </p>
         </div>
     </div>
 </asp:Content>
