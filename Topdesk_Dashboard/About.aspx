@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="DivContent1">
-        <div id="InnerDivContent1">
+        <div class="Paragraph" id="InnerDivContent1">
             <h1 id="Kop">Over</h1>
             <p id="Paragraph">
                 Deze website is gebouwd om een overzicht te bieden voor de ICT afdeling van Plegt-Vos.
