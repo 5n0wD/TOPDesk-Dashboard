@@ -1,17 +1,18 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Dashboard.aspx.cs" EnableEventValidation="false" ValidateRequest="false" Inherits="Topdesk_Dashboard.Dashboard" %>
-<%-- V1.1 --%>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Incident.aspx.cs" EnableEventValidation="false" ValidateRequest="false" Inherits="Topdesk_Dashboard.Dashboard" %>
+
+<%-- V1.3 --%>
 <asp:Content ID="Style" ContentPlaceHolderID="Stylesheets" runat="server">
     <title title="Incident">Incidenten overzicht</title>
 </asp:Content>
 
-<%--Content--%> 
+<%--Content--%>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="DivContent1">
         <div id="StreefDatumInfoDiv">
             <%--tabel 1--%>
+            <%--Datum in een label--%>
             <asp:Label CssClass="lblCssClass" ID="lblPlaceholder" Text="Het is vandaag: " runat="server"></asp:Label><asp:Label CssClass="lblCssClass" ID="lblTime" runat="server"></asp:Label>
-            <br />
-            <br />
+
             <asp:GridView ID="dgvStreefDatumInfo" runat="server" AutoGenerateColumns="False" CellPadding="3" DataSourceID="StreefDatumIncidentInfoDataSource" BorderWidth="1px" AllowPaging="True" PageSize="22" BackColor="White" BorderColor="#999999" BorderStyle="None" OnPageIndexChanging="dgvStreefDatumInfo_PageIndexChanging" OnRowDataBound="dgvStreefDatumInfo_RowDataBound" OnSelectedIndexChanged="dgvStreefDatumInfo_SelectedIndexChanged" GridLines="Vertical" HeaderStyle-CssClass="GridViewHeader" RowStyle-CssClass="GridViewRows" OnPageIndexChanged="dgvStreefDatumInfo_PageIndexChanged">
                 <Columns>
                     <asp:BoundField DataField="naam" HeaderText="naam" SortExpression="naam" />
@@ -114,5 +115,4 @@
     </div>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder4" runat="server">
-
 </asp:Content>
