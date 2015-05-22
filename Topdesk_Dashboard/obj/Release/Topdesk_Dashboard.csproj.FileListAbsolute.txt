@@ -7,3 +7,11 @@ C:\Users\Kevin\Dropbox\Topdesk project\Topdesk_Dashboard GitHub\TOPDesk-Dashboar
 C:\Users\Kevin\Dropbox\Topdesk project\Topdesk_Dashboard GitHub\TOPDesk-Dashboard\Topdesk_Dashboard\obj\Release\Topdesk_Dashboard.dll
 C:\Users\Kevin\Dropbox\Topdesk project\Topdesk_Dashboard GitHub\TOPDesk-Dashboard\Topdesk_Dashboard\obj\Release\Topdesk_Dashboard.pdb
 C:\Users\Kevin\Dropbox\Topdesk project\Topdesk_Dashboard GitHub\TOPDesk-Dashboard\Topdesk_Dashboard\obj\Release\Topdesk_Dashboard.csprojResolveAssemblyReference.cache
+C:\Users\plegt-vos\TOPDesk-Dashboard-master\TOPDesk-Dashboard-master\TOPDesk-Dashboard\Topdesk_Dashboard\bin\Topdesk_Dashboard.dll.config
+C:\Users\plegt-vos\TOPDesk-Dashboard-master\TOPDesk-Dashboard-master\TOPDesk-Dashboard\Topdesk_Dashboard\bin\Topdesk_Dashboard.dll
+C:\Users\plegt-vos\TOPDesk-Dashboard-master\TOPDesk-Dashboard-master\TOPDesk-Dashboard\Topdesk_Dashboard\bin\Topdesk_Dashboard.pdb
+C:\Users\plegt-vos\TOPDesk-Dashboard-master\TOPDesk-Dashboard-master\TOPDesk-Dashboard\Topdesk_Dashboard\bin\EntityFramework.dll
+C:\Users\plegt-vos\TOPDesk-Dashboard-master\TOPDesk-Dashboard-master\TOPDesk-Dashboard\Topdesk_Dashboard\bin\EntityFramework.xml
+C:\Users\plegt-vos\TOPDesk-Dashboard-master\TOPDesk-Dashboard-master\TOPDesk-Dashboard\Topdesk_Dashboard\obj\Release\Topdesk_Dashboard.csprojResolveAssemblyReference.cache
+C:\Users\plegt-vos\TOPDesk-Dashboard-master\TOPDesk-Dashboard-master\TOPDesk-Dashboard\Topdesk_Dashboard\obj\Release\Topdesk_Dashboard.dll
+C:\Users\plegt-vos\TOPDesk-Dashboard-master\TOPDesk-Dashboard-master\TOPDesk-Dashboard\Topdesk_Dashboard\obj\Release\Topdesk_Dashboard.pdb
