@@ -1,13 +1,14 @@
-﻿/*rest stuff*/
+﻿/*V1.3*/
+/*rest stuff*/
 body {
     font-family: Arial,sans-serif,Tahoma,Verdana,"Trebuchet MS";
-    background-color: #591701;
+    background-color: black;
 }
 
 /*IDs*/
 /*tekst*/
 #Kop {
-    background-color: purple;
+    background-color: black;
     font-family: Arial,sans-serif,Tahoma,Verdana;
 }
 
@@ -28,52 +29,52 @@ body {
 
 /*Divjes*/
 #DivContent1 {
-    background-color: olivedrab;
+    background-color: black;
 }
 
 #InnerDivContent1 {
-    background-color: hotpink;
+    background-color: black;
 }
 
 #DivContent2 {
-    background-color: darkblue;
+    background-color: black;
 }
 
 #DivContent1en2 {
-    background-color: olivedrab;
+    background-color: black;
 }
 
 #DivContent3 {
-    background-color: darkred;
+    background-color: black;
 }
 
 #DivContent4 {
-    background-color: orange;
+    background-color: black;
 }
 
 #StreefDatumInfoDiv {
-    background-color: aqua;
+    background-color: black;
     float: left;
     width: 50%;
     height: 100%;
 }
 
 #ChangeInfoDiv {
-    background-color: aqua;
+    background-color: black;
     float: left;
     width: 55%;
     height: 100%;
 }
 
 #ChangeInfoPanel {
-    background-color: orangered;
+    background-color: black;
     float: right;
     width: 45%;
     height: 100%;
 }
 
 #InfoPanelDiv {
-    background-color: orangered;
+    background-color: black;
     float: right;
     width: 50%;
 }
@@ -85,7 +86,7 @@ body {
 }
 
 #InnerInfoPanelDiv {
-    background-color: aliceblue;
+    background-color: black;
     width: 50%;
 }
 
@@ -99,32 +100,37 @@ body {
 }
 
 #IncidentenEnWijzigingen {
-    background-color: greenyellow;
+    background-color: black;
     overflow: hidden;
 }
 
 #IncidentenDiv {
     float: left;
-    background-color: darkorange;
+    background-color: darkblue;
 }
+
+.divText {
+    color: white;
+}
+
 
 #WijzigingenDiv {
     float: right;
-    background-color: orangered;
+    background-color: darkblue;
 }
 
 #binnenGekomenMeldingen {
     float: left;
-    background-color: mistyrose;
+    background-color: black;
 }
 
 #RFC {
     float: left;
-    background-color: chocolate;
+    background-color: black;
 }
 
 #chartdiv {
-    background-color: greenyellow;
+    background-color: black;
     overflow: hidden;
 }
 
@@ -174,23 +180,32 @@ body {
 }
 
 .ChartDiv {
-    background-color: greenyellow;
+    background-color: black;
 }
 
 
 
 .GridViewHeader {
-    background-color: aquamarine;
+    background-color: black;
 }
 
 .GridViewRows {
-    background-color: lightgoldenrodyellow;
+    background-color: black;
 }
 
 .lblCssClass {
-    background-color: aqua;
+    background-color: black;
+    color: white;
+}
+
+.lblPlaceholder {
+    background-color: black;
+    color: white;
 }
 
 .MenuCssClass {
-    background-color: greenyellow;
+    color: white;
+    background-color: yellow;
+
+
 }

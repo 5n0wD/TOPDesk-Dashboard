@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" EnableEventValidation="false" AutoEventWireup="true" CodeBehind="Change.aspx.cs" Inherits="Topdesk_Dashboard.WebForm1" %>
 
-<%-- V1.1 --%>
+<%-- V1.3 --%>
 <asp:Content ID="Style" ContentPlaceHolderID="Stylesheets" runat="server">
     <title title="Wijziging">Wijzigingen Overzicht</title>
 </asp:Content>
@@ -10,16 +10,28 @@
             <asp:GridView runat="server" ID="dgvChangeInfo" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataSourceID="WijzigingsDataSource" GridLines="Vertical" AutoGenerateColumns="False" AllowPaging="True" PageSize="23" OnSelectedIndexChanged="dgvChangeInfo_SelectedIndexChanged" OnPageIndexChanged="dgvChangeInfo_PageIndexChanged" OnPageIndexChanging="dgvChangeInfo_PageIndexChanging" OnRowDataBound="dgvChangeInfo_RowDataBound">
                 <AlternatingRowStyle BackColor="#DCDCDC" />
                 <Columns>
-                    <asp:BoundField DataField="Nummer" HeaderText="Nummer" SortExpression="Nummer"></asp:BoundField>
-                    <asp:BoundField DataField="Actviteit" HeaderText="Actviteit" ReadOnly="True" SortExpression="Actviteit"></asp:BoundField>
-                    <asp:BoundField DataField="briefdescription" HeaderText="briefdescription" ReadOnly="True" SortExpression="briefdescription" />
+                    <asp:BoundField DataField="Nummer" HeaderText="Nummer" SortExpression="Nummer">
+                    <HeaderStyle Width="90px" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="Actviteit" HeaderText="Actviteit" ReadOnly="True" SortExpression="Actviteit">
+                    <HeaderStyle Width="85px" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="briefdescription" HeaderText="briefdescription" ReadOnly="True" SortExpression="briefdescription" >
+                    <HeaderStyle Width="200px" />
+                    </asp:BoundField>
                     <asp:BoundField DataField="categorie en subcategorie" HeaderText="categorie en subcategorie" SortExpression="categorie en subcategorie" ReadOnly="True">
                         <HeaderStyle CssClass="HiddenTableColumns" />
                         <ItemStyle CssClass="HiddenTableColumns" />
                     </asp:BoundField>
-                    <asp:BoundField DataField="aanmaak datum" HeaderText="aanmaak datum" SortExpression="aanmaak datum" DataFormatString="{0:d}" ReadOnly="True" />
-                    <asp:BoundField DataField="wijzigings datum" HeaderText="wijzigings datum" ReadOnly="True" SortExpression="wijzigings datum" DataFormatString="{0:d}"></asp:BoundField>
-                    <asp:BoundField DataField="Eind datum" DataFormatString="{0:d}" HeaderText="Eind datum" ReadOnly="True" SortExpression="Eind datum" />
+                    <asp:BoundField DataField="aanmaak datum" HeaderText="aanmaak datum" SortExpression="aanmaak datum" DataFormatString="{0:d}" ReadOnly="True" >
+                    <HeaderStyle Width="125px" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="wijzigings datum" HeaderText="wijzigings datum" ReadOnly="True" SortExpression="wijzigings datum" DataFormatString="{0:d}">
+                    <HeaderStyle Width="135px" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="Eind datum" DataFormatString="{0:d}" HeaderText="Eind datum" ReadOnly="True" SortExpression="Eind datum" >
+                    <HeaderStyle Width="100px" />
+                    </asp:BoundField>
                     <asp:BoundField DataField="beschrijving" HeaderText="beschrijving" SortExpression="beschrijving">
                         <HeaderStyle CssClass="HiddenTableColumns" />
                         <ItemStyle CssClass="HiddenTableColumns" />

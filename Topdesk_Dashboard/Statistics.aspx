@@ -118,12 +118,12 @@
     <cc1:TabContainer ID="tabContInciWijzig" runat="server">
         <cc1:TabPanel runat="server" ID="tabPnlInci" CssClass="TabContPanel" HeaderText="Incidenten">
             <ContentTemplate>
-                <iframe width="1300" height="1200" src="IncidentStats.aspx" runat="server"></iframe>
+                <iframe width="1850" height="1200" src="IncidentStats.aspx" runat="server"></iframe>
             </ContentTemplate>
         </cc1:TabPanel>
         <cc1:TabPanel runat="server" ID="tabPnlWijz" CssClass="TabContPanel" HeaderText="Wijzigingen">
             <ContentTemplate>
-                <iframe src="ChangeStats.aspx" width="1300" height="1240" runat="server"></iframe>
+                <iframe width="1850" height="1240" src="ChangeStats.aspx" runat="server"></iframe>
             </ContentTemplate>
         </cc1:TabPanel>
     </cc1:TabContainer>

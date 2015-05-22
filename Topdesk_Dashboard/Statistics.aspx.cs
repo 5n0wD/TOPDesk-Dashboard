@@ -40,7 +40,7 @@ namespace Topdesk_Dashboard
             string listpath = @"C:\inetpub\wwwroot\XmlFiles\Countlist.xml";
             #endregion
 
-            #region LInQ uitleg
+            #region Statistieken van Incidenten en Wijzigingen
             /*
              * LInQ ( Language Integrated Query) een soort SQL maar dan "andersom"
              * je begint bijna altijd met var omdat het vaak onduidelijk is wat voor soort return type je krijgt(int, string, float, maar ook list en arrays)
@@ -48,9 +48,6 @@ namespace Topdesk_Dashboard
              * vervolgens kun je de gebruikelijke SQL statements gebruiken o.a. Where,Join,Order by,Group by
              * en je eindigt met de select.
              */
-            #endregion
-
-            #region Statistieken van Incidenten en Wijzigingen
             //incidenten
             //alle incidenten
             var countTotal = (from cntTotal in TopDeskModel.incidents
