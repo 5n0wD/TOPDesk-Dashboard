@@ -22,6 +22,28 @@
                 </asp:Chart>
                 <asp:SqlDataSource ID="sqlDatasrcOpenstaand" runat="server" ConnectionString="<%$ ConnectionStrings:topdesk5ConnectionString %>" SelectCommand="SELECT DISTINCT CAST(plannedfinaldate AS date) AS [geplande einddatum], COUNT(*) AS [Aantal activiteiten] FROM changeactivity WHERE (plannedfinaldate &gt;= SYSDATETIME()) AND (resolved = 0) GROUP BY plannedfinaldate ORDER BY [geplande einddatum] DESC"></asp:SqlDataSource>
             </div>
+            <p class="Paragraph">Applicatiekaart wijzigingen</p>
+            <div id="ApplicatieKaartWijz">
+                <asp:Chart ID="Chart1" runat="server" DataSourceID="sqlDSAppkaart" Width="900px" Height="200px">
+                    <Series>
+                        <asp:Series Name="Series1" CustomProperties="DrawSideBySide=True, PointWidth=0.5" Font="Microsoft Sans Serif, 8px" IsValueShownAsLabel="True" LabelBackColor="White" LabelBorderColor="Red" LegendMapAreaAttributes="#VALX" MarkerStep="5" MarkerStyle="Triangle" Palette="Fire" XValueMember="ref_category_name" YValueMembers="Expr1" YValueType="Int32">
+                            <SmartLabelStyle IsOverlappedHidden="False" MaxMovingDistance="60" />
+                        </asp:Series>
+                    </Series>
+                    <ChartAreas>
+                        <asp:ChartArea Name="ChartArea1">
+                            <AxisY Title="Hoeveelheid meldingen">
+                            </AxisY>
+                            <AxisX IntervalAutoMode="VariableCount" IsLabelAutoFit="False" IsMarginVisible="False" Title="Applicatie">
+                                <LabelStyle Interval="Auto" IntervalOffset="Auto" IsStaggered="True" TruncatedLabels="True" />
+                            </AxisX>
+                            <Position Height="95" Width="95" X="3" Y="3" />
+                        </asp:ChartArea>
+
+                    </ChartAreas>
+                </asp:Chart>
+                <asp:SqlDataSource ID="sqlDSAppkaart" runat="server" ConnectionString="<%$ ConnectionStrings:topdesk5ConnectionString %>" SelectCommand="SELECT COUNT(ref_category_name) AS Expr1, ref_category_name FROM change GROUP BY ref_category_name ORDER BY Expr1"></asp:SqlDataSource>
+            </div>
 
             <div id="RFC">
                 <p class="Paragraph">Wijzigings aanvragen</p>
