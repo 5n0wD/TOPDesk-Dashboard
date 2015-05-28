@@ -2,7 +2,7 @@
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 
-<%-- V1.3 --%>
+<%-- V1.4 --%>
 <%@ Register Assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI.DataVisualization.Charting" TagPrefix="asp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Stylesheets" runat="server">
     <script src="ScriptFile.js" type="text/javascript"></script>
