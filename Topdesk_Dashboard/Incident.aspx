@@ -48,21 +48,21 @@
             <div id="innerInfoPanelDiv" class="auto-style1">
                 <asp:Table ID="tblAspTable" runat="server">
                     <asp:TableRow>
-                        <asp:TableCell><asp:Label runat="server" Text="IncidentNaam:"></asp:Label></asp:TableCell>
+                        <asp:TableCell><asp:Label runat="server" CssClass="lblCssClass" Text="IncidentNaam:"></asp:Label></asp:TableCell>
                         <asp:TableCell>
-                            <asp:TextBox ID="txtIncidentNaam" runat="server" ReadOnly="True"></asp:TextBox>
+                            <asp:TextBox ID="txtIncidentNaam"  runat="server" ReadOnly="True"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow>
                         <asp:TableCell>
-                            <asp:Label runat="server" Text="Streef Datum:"></asp:Label></asp:TableCell>
+                            <asp:Label runat="server" CssClass="lblCssClass" Text="Streef Datum:"></asp:Label></asp:TableCell>
                         <asp:TableCell>
                             <asp:TextBox ID="txtStreefDatum" runat="server" ReadOnly="True"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow>
                         <asp:TableCell>
-                            <asp:Label runat="server" Text="Aanmeld Datum:"></asp:Label>
+                            <asp:Label runat="server" CssClass="lblCssClass" Text="Aanmeld Datum:"></asp:Label>
                         </asp:TableCell>
                         <asp:TableCell>
                             <asp:TextBox ID="txtAanmeldDatum" runat="server" ReadOnly="True"></asp:TextBox>
@@ -70,7 +70,7 @@
                     </asp:TableRow>
                     <asp:TableRow>
                         <asp:TableCell>
-                            <asp:Label runat="server" Text="Wijzigings Datum:"></asp:Label>
+                            <asp:Label runat="server" CssClass="lblCssClass" Text="Wijzigings Datum:"></asp:Label>
                         </asp:TableCell>
                         <asp:TableCell>
                             <asp:TextBox ID="txtWijzigingsDatum" runat="server" ReadOnly="True"></asp:TextBox>
@@ -78,7 +78,7 @@
                     </asp:TableRow>
                     <asp:TableRow>
                         <asp:TableCell>
-                            <asp:Label runat="server" Text="Status:"></asp:Label>
+                            <asp:Label runat="server" CssClass="lblCssClass" Text="Status:"></asp:Label>
                         </asp:TableCell>
                         <asp:TableCell>
                             <asp:TextBox ID="txtStatus" runat="server" ReadOnly="True"></asp:TextBox>
@@ -86,7 +86,7 @@
                     </asp:TableRow>
                     <asp:TableRow>
                         <asp:TableCell>
-                            <asp:Label runat="server" Text="Korte Omschrijving:"></asp:Label>
+                            <asp:Label runat="server" CssClass="lblCssClass" Text="Korte Omschrijving:"></asp:Label>
                         </asp:TableCell>
                         <asp:TableCell>
                             <asp:TextBox ID="txtKorteOmschrijving" runat="server" ReadOnly="True" Width="400px"></asp:TextBox>
@@ -94,10 +94,10 @@
                     </asp:TableRow>
                     <asp:TableRow>
                         <asp:TableCell VerticalAlign="Top">
-                            <asp:Label runat="server" Text="Actie:" ></asp:Label>
+                            <asp:Label runat="server" CssClass="lblCssClass" Text="Actie:" ></asp:Label>
                         </asp:TableCell>
                         <asp:TableCell>
-                            <asp:TextBox ID="txtActie" runat="server" ReadOnly="True" TextMode="MultiLine" Height="449px" Width="350px"></asp:TextBox>
+                            <asp:TextBox ID="txtActie" runat="server" ReadOnly="True" TextMode="MultiLine" Height="449px" Width="400px"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                 </asp:Table>

@@ -52,10 +52,16 @@ body {
     background-color: black;
 }
 
+#InfoPanelDiv {
+    background-color: black;
+    float: right;
+    width: 60%;
+}
+
 #StreefDatumInfoDiv {
     background-color: black;
     float: left;
-    width: 50%;
+    width: 40%;
     height: 100%;
 }
 
@@ -71,12 +77,6 @@ body {
     float: right;
     width: 45%;
     height: 100%;
-}
-
-#InfoPanelDiv {
-    background-color: black;
-    float: right;
-    width: 50%;
 }
 
 #tabContent {
