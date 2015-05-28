@@ -65,7 +65,7 @@
                     <SortedDescendingHeaderStyle BackColor="#000065" />
                 </asp:GridView>
                 <asp:SqlDataSource ID="sqlDSAuthNonImpl" runat="server" ConnectionString="<%$ ConnectionStrings:topdesk5ConnectionString %>"
-                    SelectCommand="select number,briefdescription,cast(dataanmk as date) &quot;aanmaak datum&quot; from change where authorizationdate is null and rejecteddate is null"></asp:SqlDataSource>
+                    SelectCommand="SELECT number, briefdescription, CAST(dataanmk AS date) AS [aanmaak datum] FROM change WHERE (authorizationdate IS NULL) AND (rejecteddate IS NULL) ORDER BY dataanmk DESC"></asp:SqlDataSource>
             </div>
 
 
