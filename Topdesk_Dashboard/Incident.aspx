@@ -14,6 +14,7 @@
             <asp:Label CssClass="lblCssClass" ID="lblPlaceholder" Text="Het is vandaag: " runat="server"></asp:Label><asp:Label CssClass="lblCssClass" ID="lblTime" runat="server"></asp:Label>
 
             <asp:GridView ID="dgvStreefDatumInfo" runat="server" AutoGenerateColumns="False" CellPadding="3" DataSourceID="StreefDatumIncidentInfoDataSource" BorderWidth="1px" AllowPaging="True" PageSize="22" BackColor="White" BorderColor="#999999" BorderStyle="None" OnPageIndexChanging="dgvStreefDatumInfo_PageIndexChanging" OnRowDataBound="dgvStreefDatumInfo_RowDataBound" OnSelectedIndexChanged="dgvStreefDatumInfo_SelectedIndexChanged" GridLines="Vertical" HeaderStyle-CssClass="GridViewHeader" RowStyle-CssClass="GridViewRows" OnPageIndexChanged="dgvStreefDatumInfo_PageIndexChanged">
+                <AlternatingRowStyle BackColor="#DCDCDC"/>
                 <Columns>
                     <asp:BoundField DataField="naam" HeaderText="naam" SortExpression="naam" />
                     <asp:BoundField DataField="streef datum" HeaderText="streef datum" SortExpression="streef datum" DataFormatString="{0:d}" ReadOnly="True"></asp:BoundField>
@@ -97,7 +98,7 @@
                             <asp:Label runat="server" CssClass="lblCssClass" Text="Actie:" ></asp:Label>
                         </asp:TableCell>
                         <asp:TableCell>
-                            <asp:TextBox ID="txtActie" runat="server" ReadOnly="True" TextMode="MultiLine" Height="449px" Width="400px"></asp:TextBox>
+                            <asp:TextBox ID="txtActie" runat="server" ReadOnly="True" TextMode="MultiLine" Height="450px" Width="400px"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                 </asp:Table>

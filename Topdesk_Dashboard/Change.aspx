@@ -110,7 +110,7 @@ order by c.plannedfinaldate asc"></asp:SqlDataSource>
                             <asp:Label runat="server" CssClass="lblCssClass" Text="Actie:" ></asp:Label>
                         </asp:TableCell>
                         <asp:TableCell>
-                            <asp:TextBox ID="txtActie" runat="server" ReadOnly="True" TextMode="MultiLine" Height="449px" Width="350px"></asp:TextBox>
+                            <asp:TextBox ID="txtActie" runat="server" ReadOnly="True" TextMode="MultiLine" Height="450px" Width="400px"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                 </asp:Table>
