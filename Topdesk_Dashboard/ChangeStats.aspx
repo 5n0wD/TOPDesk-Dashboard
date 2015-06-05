@@ -14,13 +14,18 @@
                 <p class="Paragraph">Naderende einddata voor activiteiten.</p>
                 <asp:Chart ID="activityChart" Height="200px" Width="900px" runat="server" DataSourceID="sqlDatasrcOpenstaand">
                     <Series>
-                        <asp:Series Name="Series1" XValueMember="geplande einddatum" YValueMembers="Aantal activiteiten"></asp:Series>
+                        <asp:Series Name="Series1" XValueMember="geplande einddatum" YValueMembers="activiteiten"></asp:Series>
                     </Series>
                     <ChartAreas>
                         <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
                     </ChartAreas>
                 </asp:Chart>
-                <asp:SqlDataSource ID="sqlDatasrcOpenstaand" runat="server" ConnectionString="<%$ ConnectionStrings:topdesk5ConnectionString %>" SelectCommand="SELECT DISTINCT CAST(plannedfinaldate AS date) AS [geplande einddatum], COUNT(*) AS [Aantal activiteiten] FROM changeactivity WHERE (plannedfinaldate &gt;= SYSDATETIME()) AND (resolved = 0) GROUP BY plannedfinaldate ORDER BY [geplande einddatum] DESC"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="sqlDatasrcOpenstaand" runat="server" ConnectionString="<%$ ConnectionStrings:topdesk5ConnectionString %>" SelectCommand="select distinct(cast(plannedfinaldate as date)) &quot;geplande einddatum&quot;,count(number)&quot;activiteiten&quot;
+from changeactivity
+where plannedfinaldate &gt;= SYSDATETIME() and resolved = 0
+group by plannedfinaldate
+order by 1 desc
+"></asp:SqlDataSource>
             </div>
             <p class="Paragraph">Applicatiekaart wijzigingen</p>
             <div id="ApplicatieKaartWijz">

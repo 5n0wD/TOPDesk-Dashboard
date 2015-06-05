@@ -1,4 +1,4 @@
-﻿/*V1.3*/
+﻿/*V1.4*/
 /*rest stuff*/
 body {
     font-family: Arial,sans-serif,Tahoma,Verdana,"Trebuchet MS";
@@ -182,8 +182,6 @@ body {
 .ChartDiv {
     background-color: black;
 }
-
-
 
 .GridViewHeader {
     background-color: black;

@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ChangeStats.aspx.cs" Inherits="Topdesk_Dashboard.ChangeStats" %>
-
+<%-- V1.4 --%>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -14,13 +14,18 @@
                 <p class="Paragraph">Naderende einddata voor activiteiten.</p>
                 <asp:Chart ID="activityChart" Height="200px" Width="900px" runat="server" DataSourceID="sqlDatasrcOpenstaand">
                     <Series>
-                        <asp:Series Name="Series1" XValueMember="geplande einddatum" YValueMembers="Aantal activiteiten"></asp:Series>
+                        <asp:Series Name="Series1" XValueMember="geplande einddatum" YValueMembers="activiteiten"></asp:Series>
                     </Series>
                     <ChartAreas>
                         <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
                     </ChartAreas>
                 </asp:Chart>
-                <asp:SqlDataSource ID="sqlDatasrcOpenstaand" runat="server" ConnectionString="<%$ ConnectionStrings:topdesk5ConnectionString %>" SelectCommand="SELECT DISTINCT CAST(plannedfinaldate AS date) AS [geplande einddatum], COUNT(*) AS [Aantal activiteiten] FROM changeactivity WHERE (plannedfinaldate &gt;= SYSDATETIME()) AND (resolved = 0) GROUP BY plannedfinaldate ORDER BY [geplande einddatum] DESC"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="sqlDatasrcOpenstaand" runat="server" ConnectionString="<%$ ConnectionStrings:topdesk5ConnectionString %>" SelectCommand="select distinct(cast(plannedfinaldate as date)) &quot;geplande einddatum&quot;,count(number)&quot;activiteiten&quot;
+from changeactivity
+where plannedfinaldate &gt;= SYSDATETIME() and resolved = 0
+group by plannedfinaldate
+order by 1 desc
+"></asp:SqlDataSource>
             </div>
             <p class="Paragraph">Applicatiekaart wijzigingen</p>
             <div id="ApplicatieKaartWijz">
@@ -65,7 +70,7 @@
                     <SortedDescendingHeaderStyle BackColor="#000065" />
                 </asp:GridView>
                 <asp:SqlDataSource ID="sqlDSAuthNonImpl" runat="server" ConnectionString="<%$ ConnectionStrings:topdesk5ConnectionString %>"
-                    SelectCommand="select number,briefdescription,cast(dataanmk as date) &quot;aanmaak datum&quot; from change where authorizationdate is null and rejecteddate is null"></asp:SqlDataSource>
+                    SelectCommand="SELECT number, briefdescription, CAST(dataanmk AS date) AS [aanmaak datum] FROM change WHERE (authorizationdate IS NULL) AND (rejecteddate IS NULL) ORDER BY dataanmk DESC"></asp:SqlDataSource>
             </div>
 
 
