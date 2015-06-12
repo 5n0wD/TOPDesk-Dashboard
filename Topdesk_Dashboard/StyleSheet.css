@@ -109,14 +109,33 @@ body {
     background-color: darkblue;
 }
 
-.divText {
-    color: white;
-}
-
-
 #WijzigingenDiv {
     float: right;
     background-color: darkblue;
+}
+
+#EncapsulationDiv {
+    width: 1200px;
+}
+
+#IncidentLeft {
+    float: left;
+}
+
+#IncidentRight {
+    float: right;
+}
+
+#ChangeLeft {
+    float: left;
+}
+
+#ChangeRight {
+    float: right;
+}
+
+.divText {
+    color: white;
 }
 
 #binnenGekomenMeldingen {
@@ -204,6 +223,4 @@ body {
 .MenuCssClass {
     color: white;
     background-color: yellow;
-
-
 }
