@@ -47,7 +47,7 @@
                     <asp:SqlDataSource ID="sqlDSAppkaart" runat="server" ConnectionString="<%$ ConnectionStrings:topdesk5ConnectionString %>" SelectCommand="SELECT COUNT(ref_category_name) AS Expr1, ref_category_name FROM change GROUP BY ref_category_name ORDER BY Expr1"></asp:SqlDataSource>
                 </div>
             </div>
-
+             &nbsp
             <div id="ChangeRight">
                 <div id="RFC">
                     <p class="Paragraph">Wijzigings aanvragen</p>
