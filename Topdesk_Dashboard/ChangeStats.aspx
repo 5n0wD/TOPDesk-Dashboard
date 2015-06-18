@@ -24,7 +24,7 @@
                     </asp:Chart>
                     <asp:SqlDataSource ID="sqlDatasrcOpenstaand" runat="server" ConnectionString="<%$ ConnectionStrings:topdesk5ConnectionString %>" SelectCommand="select distinct(cast(plannedfinaldate as date)) &quot;geplande einddatum&quot;,count(number)&quot;activiteiten&quot; from changeactivity where plannedfinaldate &gt;= SYSDATETIME() and resolved = 0 group by plannedfinaldate order by 1 desc "></asp:SqlDataSource>
                 </div>
-                <p class="Paragraph">Applicatiekaart wijzigingen</p>
+                <p class="Paragraph">Applicatiekaart wijzigingen, vanaf begin 2014</p>
                 <div id="ApplicatieKaartWijz">
                     <asp:Chart ID="Chart1" runat="server" DataSourceID="sqlDSAppkaart" Width="900px" Height="200px">
                         <Series>

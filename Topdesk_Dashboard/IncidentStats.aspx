@@ -12,7 +12,7 @@
         <div id="EncapsulationDiv">
             <div id="IncidentLeft">
                 <div id="DivContent2">
-                    <p class="Paragraph">Incidenten melding per 10 dagen, vanaf begin 2015</p>
+                    <p class="Paragraph">Incidenten melding van de afgelopen dagen</p>
                     <div class="ChartDiv">
                         <asp:Chart ID="Chart2" runat="server" DataSourceID="AOTimeDatasource" Width="900px" Height="200px" DataMember="DefaultView">
                             <Series>
@@ -58,7 +58,7 @@
                 </div>
 
                 <div id="DivContent4">
-                    <p class="Paragraph">Applicatie kaart</p>
+                    <p class="Paragraph">Applicatie kaart, vanaf begin 2014</p>
                     <div class="ChartDiv">
                         <asp:Chart ID="Chart1" runat="server" DataSourceID="SqlDataSource1" Width="900px" Height="200px" Palette="Fire">
                             <Series>
